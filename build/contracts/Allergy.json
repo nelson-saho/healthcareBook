@@ -1,0 +1,342 @@
+{
+  "contractName": "Allergy",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthCareBook/contracts/Allergy.sol\":\"Allergy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthCareBook/contracts/Allergy.sol\":{\"keccak256\":\"0x23bd8ea1fefb1c790935eea83a2c616f03c8892a5a2dd4d4825d1e2a62dafb72\",\"urls\":[\"bzz-raw://8275f3e0c8856306dbc61b23eedf5841b54e6a1ac0545eeede82fdf9b8966a79\",\"dweb:/ipfs/QmTJtDySQyAkxk2ih4ZZK5mtkkWLQftsuZuRwbKkizTYV3\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820ca2b5ef0c92ab3080f195f0990ed71f6019fe4fca37ab0a9277bafa69e921f3064736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820ca2b5ef0c92ab3080f195f0990ed71f6019fe4fca37ab0a9277bafa69e921f3064736f6c63430005100032",
+  "sourceMap": "68:163:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:163:0;;;;;;;",
+  "deployedSourceMap": "68:163:0:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.7.0;\r\n\r\ncontract Allergy {\r\n    struct AllergyInfo {\r\n        uint allergytId;\r\n        string allergyName;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
+  "sourcePath": "C:\\Ethereum\\healthCareBook\\contracts\\Allergy.sol",
+  "ast": {
+    "absolutePath": "/C/Ethereum/healthCareBook/contracts/Allergy.sol",
+    "exportedSymbols": {
+      "Allergy": [
+        11
+      ]
+    },
+    "id": 12,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 11,
+        "linearizedBaseContracts": [
+          11
+        ],
+        "name": "Allergy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Allergy.AllergyInfo",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "allergytId",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "122:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "122:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "allergyName",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "148:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "148:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "observation",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "177:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "177:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "patientId",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "206:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "206:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "AllergyInfo",
+            "nodeType": "StructDefinition",
+            "scope": 11,
+            "src": "92:136:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 12,
+        "src": "68:163:0"
+      }
+    ],
+    "src": "33:198:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Ethereum/healthCareBook/contracts/Allergy.sol",
+    "exportedSymbols": {
+      "Allergy": [
+        11
+      ]
+    },
+    "id": 12,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 11,
+        "linearizedBaseContracts": [
+          11
+        ],
+        "name": "Allergy",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Allergy.AllergyInfo",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "allergytId",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "122:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "122:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "allergyName",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "148:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "148:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "observation",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "177:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "177:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "patientId",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "206:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "206:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "AllergyInfo",
+            "nodeType": "StructDefinition",
+            "scope": 11,
+            "src": "92:136:0",
+            "visibility": "public"
+          }
+        ],
+        "scope": 12,
+        "src": "68:163:0"
+      }
+    ],
+    "src": "33:198:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-10T14:58:47.953Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

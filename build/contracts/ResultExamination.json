@@ -1,0 +1,554 @@
+{
+  "contractName": "ResultExamination",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthCareBook/contracts/ResultExamination.sol\":\"ResultExamination\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthCareBook/contracts/ResultExamination.sol\":{\"keccak256\":\"0xd29657a79ee41115b6505a65a241a09551edff9d09b3e00638eb08bc4301cd3f\",\"urls\":[\"bzz-raw://2ec100f726c2d0d81d2944d236f13141eb6cb67696ee4d9a2cc35a047e4cba93\",\"dweb:/ipfs/QmcGDeywjwQ6FzYPASBJu82nbBrNtYsNdCtif71JsNenY4\"]},\"/C/Ethereum/healthCareBook/contracts/ResultExaminationDetail.sol\":{\"keccak256\":\"0x867f97bb96fbf418b0ef23393c8cc3de5bd4a5d50c8d766b4b078bc54462ea6c\",\"urls\":[\"bzz-raw://92189004fed9ec915ff4766f4850ff701a9a765b83a779c617a1c429bbc8e475\",\"dweb:/ipfs/Qmeovi3rJQ49PgaRGk2Q8LbWJLxDPGWMcHeu5dDJT97EZe\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582073c6c5b53c7b1c6aa6299aa5683f03841764566fbc860a0326163097b7dd4ae664736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582073c6c5b53c7b1c6aa6299aa5683f03841764566fbc860a0326163097b7dd4ae664736f6c63430005100032",
+  "sourceMap": "137:474:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;137:474:7;;;;;;;",
+  "deployedSourceMap": "137:474:7:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.7.0;\r\n\r\n//import \"./Doctor.sol\";\r\nimport \"./ResultExaminationDetail.sol\";\r\n\r\ncontract ResultExamination is ResultExaminationDetail {\r\n\r\n    struct ResultExaminationInfo {\r\n        uint docResultId;\r\n        uint docExaminationId;\r\n        string resultCode;\r\n        string codeResultName;\r\n        string observationDate;\r\n    }\r\n\r\n    mapping (uint => ResultExaminationDetailInfo) detailOfResultExamination; // docResultId => ResultExaminationDetailInfo\r\n\r\n    /*function addResultExamination (uint ) internal isDoctor(msg.sender){\r\n    }*/\r\n\r\n\r\n\r\n}",
+  "sourcePath": "C:\\Ethereum\\healthCareBook\\contracts\\ResultExamination.sol",
+  "ast": {
+    "absolutePath": "/C/Ethereum/healthCareBook/contracts/ResultExamination.sol",
+    "exportedSymbols": {
+      "ResultExamination": [
+        1093
+      ]
+    },
+    "id": 1094,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1074,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:7"
+      },
+      {
+        "absolutePath": "/C/Ethereum/healthCareBook/contracts/ResultExaminationDetail.sol",
+        "file": "./ResultExaminationDetail.sol",
+        "id": 1075,
+        "nodeType": "ImportDirective",
+        "scope": 1094,
+        "sourceUnit": 1108,
+        "src": "94:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1076,
+              "name": "ResultExaminationDetail",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1107,
+              "src": "167:23:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ResultExaminationDetail_$1107",
+                "typeString": "contract ResultExaminationDetail"
+              }
+            },
+            "id": 1077,
+            "nodeType": "InheritanceSpecifier",
+            "src": "167:23:7"
+          }
+        ],
+        "contractDependencies": [
+          1107
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1093,
+        "linearizedBaseContracts": [
+          1093,
+          1107
+        ],
+        "name": "ResultExamination",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ResultExamination.ResultExaminationInfo",
+            "id": 1088,
+            "members": [
+              {
+                "constant": false,
+                "id": 1079,
+                "name": "docResultId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "240:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1078,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "240:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1081,
+                "name": "docExaminationId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "267:21:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1080,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "267:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1083,
+                "name": "resultCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "299:17:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1082,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "299:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1085,
+                "name": "codeResultName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "327:21:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1084,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "327:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1087,
+                "name": "observationDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "359:22:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1086,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "359:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ResultExaminationInfo",
+            "nodeType": "StructDefinition",
+            "scope": 1093,
+            "src": "200:189:7",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1092,
+            "name": "detailOfResultExamination",
+            "nodeType": "VariableDeclaration",
+            "scope": 1093,
+            "src": "397:71:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ResultExaminationDetailInfo_$1106_storage_$",
+              "typeString": "mapping(uint256 => struct ResultExaminationDetail.ResultExaminationDetailInfo)"
+            },
+            "typeName": {
+              "id": 1091,
+              "keyType": {
+                "id": 1089,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "406:4:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "397:45:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ResultExaminationDetailInfo_$1106_storage_$",
+                "typeString": "mapping(uint256 => struct ResultExaminationDetail.ResultExaminationDetailInfo)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1090,
+                "name": "ResultExaminationDetailInfo",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1106,
+                "src": "414:27:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ResultExaminationDetailInfo_$1106_storage_ptr",
+                  "typeString": "struct ResultExaminationDetail.ResultExaminationDetailInfo"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1094,
+        "src": "137:474:7"
+      }
+    ],
+    "src": "33:578:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Ethereum/healthCareBook/contracts/ResultExamination.sol",
+    "exportedSymbols": {
+      "ResultExamination": [
+        1093
+      ]
+    },
+    "id": 1094,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1074,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:7"
+      },
+      {
+        "absolutePath": "/C/Ethereum/healthCareBook/contracts/ResultExaminationDetail.sol",
+        "file": "./ResultExaminationDetail.sol",
+        "id": 1075,
+        "nodeType": "ImportDirective",
+        "scope": 1094,
+        "sourceUnit": 1108,
+        "src": "94:39:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1076,
+              "name": "ResultExaminationDetail",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1107,
+              "src": "167:23:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ResultExaminationDetail_$1107",
+                "typeString": "contract ResultExaminationDetail"
+              }
+            },
+            "id": 1077,
+            "nodeType": "InheritanceSpecifier",
+            "src": "167:23:7"
+          }
+        ],
+        "contractDependencies": [
+          1107
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1093,
+        "linearizedBaseContracts": [
+          1093,
+          1107
+        ],
+        "name": "ResultExamination",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ResultExamination.ResultExaminationInfo",
+            "id": 1088,
+            "members": [
+              {
+                "constant": false,
+                "id": 1079,
+                "name": "docResultId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "240:16:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1078,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "240:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1081,
+                "name": "docExaminationId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "267:21:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1080,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "267:4:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1083,
+                "name": "resultCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "299:17:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1082,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "299:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1085,
+                "name": "codeResultName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "327:21:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1084,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "327:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1087,
+                "name": "observationDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1088,
+                "src": "359:22:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1086,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "359:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ResultExaminationInfo",
+            "nodeType": "StructDefinition",
+            "scope": 1093,
+            "src": "200:189:7",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1092,
+            "name": "detailOfResultExamination",
+            "nodeType": "VariableDeclaration",
+            "scope": 1093,
+            "src": "397:71:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ResultExaminationDetailInfo_$1106_storage_$",
+              "typeString": "mapping(uint256 => struct ResultExaminationDetail.ResultExaminationDetailInfo)"
+            },
+            "typeName": {
+              "id": 1091,
+              "keyType": {
+                "id": 1089,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "406:4:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "397:45:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_ResultExaminationDetailInfo_$1106_storage_$",
+                "typeString": "mapping(uint256 => struct ResultExaminationDetail.ResultExaminationDetailInfo)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1090,
+                "name": "ResultExaminationDetailInfo",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1106,
+                "src": "414:27:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ResultExaminationDetailInfo_$1106_storage_ptr",
+                  "typeString": "struct ResultExaminationDetail.ResultExaminationDetailInfo"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1094,
+        "src": "137:474:7"
+      }
+    ],
+    "src": "33:578:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-10T14:58:47.993Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

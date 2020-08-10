@@ -1,0 +1,654 @@
+{
+  "contractName": "SpecialtyMedicine",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthCareBook/contracts/SpecialtyMedicine.sol\":\"SpecialtyMedicine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthCareBook/contracts/SpecialtyMedicine.sol\":{\"keccak256\":\"0xca2b8cf0666de6970e9949a19401d1cdf99b133a76f5aa35e249dba48cf58ed5\",\"urls\":[\"bzz-raw://7d02bb61b3af030dd4b39fd5851aaa713ec60b1aac1ed16ca0312a16c2b18472\",\"dweb:/ipfs/QmXiWnkjSKtxxZBpFwCES8CTyjJAfzyTLtiNevcfTgrYEK\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158200ad1db95c6453485d45d7c967d88efdc4d96a013cb717fb47155e4708e25745964736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158200ad1db95c6453485d45d7c967d88efdc4d96a013cb717fb47155e4708e25745964736f6c63430005100032",
+  "sourceMap": "68:374:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:374:10;;;;;;;",
+  "deployedSourceMap": "68:374:10:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.7.0;\r\n\r\ncontract SpecialtyMedicine {\r\n    struct SpecialtyMedicineInfo {\r\n        uint documentId;\r\n        string medicationCode;\r\n        string medicationName;\r\n        string normalStartDate;\r\n        string normalEndDate;\r\n        string DosageUnit;\r\n        uint DosageQuantity;\r\n        string prescriptionDate;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
+  "sourcePath": "C:\\Ethereum\\healthCareBook\\contracts\\SpecialtyMedicine.sol",
+  "ast": {
+    "absolutePath": "/C/Ethereum/healthCareBook/contracts/SpecialtyMedicine.sol",
+    "exportedSymbols": {
+      "SpecialtyMedicine": [
+        1688
+      ]
+    },
+    "id": 1689,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1666,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1688,
+        "linearizedBaseContracts": [
+          1688
+        ],
+        "name": "SpecialtyMedicine",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SpecialtyMedicine.SpecialtyMedicineInfo",
+            "id": 1687,
+            "members": [
+              {
+                "constant": false,
+                "id": 1668,
+                "name": "documentId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "142:15:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1667,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "142:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1670,
+                "name": "medicationCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "168:21:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1669,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "168:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1672,
+                "name": "medicationName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "200:21:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1671,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "200:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1674,
+                "name": "normalStartDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "232:22:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1673,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "232:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1676,
+                "name": "normalEndDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "265:20:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1675,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "265:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1678,
+                "name": "DosageUnit",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "296:17:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1677,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "296:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1680,
+                "name": "DosageQuantity",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "324:19:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1679,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "324:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1682,
+                "name": "prescriptionDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "354:23:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1681,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "354:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1684,
+                "name": "observation",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "388:18:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1683,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "388:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1686,
+                "name": "patientId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "417:14:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1685,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "417:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "SpecialtyMedicineInfo",
+            "nodeType": "StructDefinition",
+            "scope": 1688,
+            "src": "102:337:10",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1689,
+        "src": "68:374:10"
+      }
+    ],
+    "src": "33:409:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Ethereum/healthCareBook/contracts/SpecialtyMedicine.sol",
+    "exportedSymbols": {
+      "SpecialtyMedicine": [
+        1688
+      ]
+    },
+    "id": 1689,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1666,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1688,
+        "linearizedBaseContracts": [
+          1688
+        ],
+        "name": "SpecialtyMedicine",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SpecialtyMedicine.SpecialtyMedicineInfo",
+            "id": 1687,
+            "members": [
+              {
+                "constant": false,
+                "id": 1668,
+                "name": "documentId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "142:15:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1667,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "142:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1670,
+                "name": "medicationCode",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "168:21:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1669,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "168:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1672,
+                "name": "medicationName",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "200:21:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1671,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "200:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1674,
+                "name": "normalStartDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "232:22:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1673,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "232:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1676,
+                "name": "normalEndDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "265:20:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1675,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "265:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1678,
+                "name": "DosageUnit",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "296:17:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1677,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "296:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1680,
+                "name": "DosageQuantity",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "324:19:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1679,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "324:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1682,
+                "name": "prescriptionDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "354:23:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1681,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "354:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1684,
+                "name": "observation",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "388:18:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1683,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "388:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1686,
+                "name": "patientId",
+                "nodeType": "VariableDeclaration",
+                "scope": 1687,
+                "src": "417:14:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1685,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "417:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "SpecialtyMedicineInfo",
+            "nodeType": "StructDefinition",
+            "scope": 1688,
+            "src": "102:337:10",
+            "visibility": "public"
+          }
+        ],
+        "scope": 1689,
+        "src": "68:374:10"
+      }
+    ],
+    "src": "33:409:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-10T14:58:48.017Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
