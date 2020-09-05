@@ -1,15 +1,15 @@
 {
   "contractName": "SpecialtyMedicine",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/mnt/c/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":\"SpecialtyMedicine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/mnt/c/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":{\"keccak256\":\"0xca2b8cf0666de6970e9949a19401d1cdf99b133a76f5aa35e249dba48cf58ed5\",\"urls\":[\"bzz-raw://7d02bb61b3af030dd4b39fd5851aaa713ec60b1aac1ed16ca0312a16c2b18472\",\"dweb:/ipfs/QmXiWnkjSKtxxZBpFwCES8CTyjJAfzyTLtiNevcfTgrYEK\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820b76a88784bbd2f815354fb0eb81968c0f09c4d9c701ee2596537323d7db3331a64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820b76a88784bbd2f815354fb0eb81968c0f09c4d9c701ee2596537323d7db3331a64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":\"SpecialtyMedicine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":{\"keccak256\":\"0x247b1f3079822e9ee1d4027b6b6c537b68cb37b3fd8ea4cd0165e72a4901b9d2\",\"urls\":[\"bzz-raw://555814bb0a439b974303f5440dbc510078cc9b7f3c2a4fa2c72cfe60c6385f18\",\"dweb:/ipfs/QmbMpTDdJXyjcq3ZbHYHWMh5iQyYapH2eC8J8MgtQnktSk\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820721867cf00243555b698681b70b713910c5bff7edb6afc969e4c6a1b3e804e5564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820721867cf00243555b698681b70b713910c5bff7edb6afc969e4c6a1b3e804e5564736f6c63430005100032",
   "sourceMap": "68:374:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:374:10;;;;;;;",
   "deployedSourceMap": "68:374:10:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.7.0;\r\n\r\ncontract SpecialtyMedicine {\r\n    struct SpecialtyMedicineInfo {\r\n        uint documentId;\r\n        string medicationCode;\r\n        string medicationName;\r\n        string normalStartDate;\r\n        string normalEndDate;\r\n        string DosageUnit;\r\n        uint DosageQuantity;\r\n        string prescriptionDate;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
-  "sourcePath": "/mnt/c/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.8.0;\r\n\r\ncontract SpecialtyMedicine {\r\n    struct SpecialtyMedicineInfo {\r\n        uint documentId;\r\n        string medicationCode;\r\n        string medicationName;\r\n        string normalStartDate;\r\n        string normalEndDate;\r\n        string DosageUnit;\r\n        uint DosageQuantity;\r\n        string prescriptionDate;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
+  "sourcePath": "C:\\Ethereum\\healthcareBook\\contracts\\SpecialtyMedicine.sol",
   "ast": {
-    "absolutePath": "/mnt/c/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
+    "absolutePath": "/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
     "exportedSymbols": {
       "SpecialtyMedicine": [
         1688
@@ -26,7 +26,7 @@
           "0.5",
           ".0",
           "<",
-          "0.7",
+          "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
@@ -324,7 +324,7 @@
     "src": "33:409:10"
   },
   "legacyAST": {
-    "absolutePath": "/mnt/c/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
+    "absolutePath": "/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
     "exportedSymbols": {
       "SpecialtyMedicine": [
         1688
@@ -341,7 +341,7 @@
           "0.5",
           ".0",
           "<",
-          "0.7",
+          "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
@@ -644,7 +644,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.3",
-  "updatedAt": "2020-08-10T15:50:36.455Z",
+  "updatedAt": "2020-09-05T20:46:47.144Z",
   "devdoc": {
     "methods": {}
   },

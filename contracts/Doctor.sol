@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.7.0;
+pragma solidity >=0.5.0 <0.8.0;
 
 import "./SafeMath.sol";
 import "./Ownable.sol";
@@ -14,7 +14,7 @@ contract Doctor is Ownable {
 
     // address public theOwner = msg.sender; //The address of deployer
 
-    uint32 counterDoctor = 0;
+    uint32 public counterDoctor = 0;
 
     struct DoctorInfo{
         uint32 doctorId;
@@ -28,6 +28,7 @@ contract Doctor is Ownable {
     mapping (uint32 => address) eachDoctor;  // Corresponding doctorId to address
     mapping (address => uint16) public doctorCount; // Corresponding address to 0 or 1 (help us to know if doctor has an account)
     mapping (address => uint32) public ownerPatientCount; // Counts the number of patients added by each doctor
+    //mapping (uint32 => DoctorInfo) allDoctors; 
 
     event NewDoctor(uint32 doctorId, string firstName, string lastName);
 
@@ -53,6 +54,7 @@ contract Doctor is Ownable {
         uint32 idDoctor = counterDoctor.sub(1);
         doctors.push(DoctorInfo(idDoctor, _firstName, _lastName, _hospitalAddress));
         eachDoctor[idDoctor] = addressDoctor;
+        //allDoctors[idDoctor] = DoctorInfo(idDoctor, _firstName, _lastName, _hospitalAddress);
         doctorCount[addressDoctor] = doctorCount[addressDoctor].add(1);
         emit NewDoctor(idDoctor, _firstName, _lastName);
     }

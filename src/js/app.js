@@ -1,65 +1,58 @@
 App = {
-  web3Provider: null,
-  contracts: {},
-
-  init: function() {
-    // Load users.
-     $.getJSON("users.json", function(data) {
-      var user_data = '';
-      
-      $.each(data, function(key, value){
-        user_data += '<tr>';
-        user_data += '<td>'+value.id+'</td>';
-        user_data += '<td>'+value.name+'</td>';
-        user_data += '<td>'+value.points+'</td>';
-        user_data += '</tr>';
+    web3Provider: null,
+    contracts: {},
+    account: '0x0',
+  
+    init: function() {
+      return App.initWeb3();
+    },
+  
+    initWeb3: function() {
+      if (typeof web3 !== 'undefined') {
+        // If a web3 instance is already provided by Meta Mask.
+        App.web3Provider = web3.currentProvider;
+        web3 = new Web3(web3.currentProvider);
+      } else {
+        // Specify default instance if no web3 instance provided
+        App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+        web3 = new Web3(App.web3Provider);
+      }
+      return App.initContract();
+    },
+  
+    initContract: function() {
+      $.getJSON("Patient.json", function(patient) {
+        // Instantiate a new truffle contract from the artifact
+        App.contracts.Patient = TruffleContract(patient);
+        // Connect provider to interact with contract
+        App.contracts.Patient.setProvider(App.web3Provider);
+  
+        return App.render();
       });
-      $('#user_table').append(user_data);
+    },
+  
+    render: function() {
+      //var patientInstance;
+      //var loader = $("#loader");
+      //var content = $("#content");
+  
+      //loader.show();
+      //content.hide();
+  
+      // Load account data
+      web3.eth.getCoinbase(function(err, account) {
+        if (err === null) {
+          App.account = account;
+          $("#accountAddress").html("Your Account: " + account);
+        }
+      });
+  
+      // Load contract data
+    }
+  };
+  
+  $(function() {
+    $(window).load(function() {
+      App.init();
     });
-
-    return App.initWeb3();
-  },
-
-  initWeb3: function() {
-    /*
-     * Replace me...
-     */
-
-    return App.initContract();
-  },
-
-  initContract: function() {
-    /*
-     * Replace me...
-     */
-
-    return App.bindEvents();
-  },
-
-  bindEvents: function() {
-    $(document).on('click', '.btn-addpoints', App.handlePoints);
-  },
-
-  handlePoints: function() {
-    event.preventDefault();
-
-    var userId = parseInt($(event.target).data('id'));
-
-    /*
-     * Replace me...
-     */
-  },
-
-  givePoints: function(id, amount) {
-    /*
-     * Replace me...
-     */
-  }
-
-};
-
-$(function() {
-  $(window).load(function() {
-    App.init();
   });
-});

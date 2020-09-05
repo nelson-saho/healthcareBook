@@ -1,15 +1,15 @@
 {
   "contractName": "Allergy",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/mnt/c/Ethereum/healthcareBook/contracts/Allergy.sol\":\"Allergy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/mnt/c/Ethereum/healthcareBook/contracts/Allergy.sol\":{\"keccak256\":\"0x23bd8ea1fefb1c790935eea83a2c616f03c8892a5a2dd4d4825d1e2a62dafb72\",\"urls\":[\"bzz-raw://8275f3e0c8856306dbc61b23eedf5841b54e6a1ac0545eeede82fdf9b8966a79\",\"dweb:/ipfs/QmTJtDySQyAkxk2ih4ZZK5mtkkWLQftsuZuRwbKkizTYV3\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820488235d8e53717525ce27f11643f44b3c9c6a6d253d6c0d3aff3a5af291e889b64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820488235d8e53717525ce27f11643f44b3c9c6a6d253d6c0d3aff3a5af291e889b64736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/Allergy.sol\":\"Allergy\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/Allergy.sol\":{\"keccak256\":\"0x209ad3bfe68323f858b78390a056e90dd85b973578d09274d3732392e94fe82b\",\"urls\":[\"bzz-raw://8c8af66d25f41dc6500bc3be986a0d3d0174d911bf79bff669a91d5286e0adb3\",\"dweb:/ipfs/QmSXqHGjes5pwKq94dKK4fYCSq4tbzCMPL55GTNAtiPUaC\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582007acf5c4068b34411c91e076ea876c3d5fc0c719d38a1846e18e62c4739bfc3164736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582007acf5c4068b34411c91e076ea876c3d5fc0c719d38a1846e18e62c4739bfc3164736f6c63430005100032",
   "sourceMap": "68:163:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:163:0;;;;;;;",
   "deployedSourceMap": "68:163:0:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.7.0;\r\n\r\ncontract Allergy {\r\n    struct AllergyInfo {\r\n        uint allergytId;\r\n        string allergyName;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
-  "sourcePath": "/mnt/c/Ethereum/healthcareBook/contracts/Allergy.sol",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.8.0;\r\n\r\ncontract Allergy {\r\n    struct AllergyInfo {\r\n        uint allergytId;\r\n        string allergyName;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
+  "sourcePath": "C:\\Ethereum\\healthcareBook\\contracts\\Allergy.sol",
   "ast": {
-    "absolutePath": "/mnt/c/Ethereum/healthcareBook/contracts/Allergy.sol",
+    "absolutePath": "/C/Ethereum/healthcareBook/contracts/Allergy.sol",
     "exportedSymbols": {
       "Allergy": [
         11
@@ -26,7 +26,7 @@
           "0.5",
           ".0",
           "<",
-          "0.7",
+          "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
@@ -168,7 +168,7 @@
     "src": "33:198:0"
   },
   "legacyAST": {
-    "absolutePath": "/mnt/c/Ethereum/healthcareBook/contracts/Allergy.sol",
+    "absolutePath": "/C/Ethereum/healthcareBook/contracts/Allergy.sol",
     "exportedSymbols": {
       "Allergy": [
         11
@@ -185,7 +185,7 @@
           "0.5",
           ".0",
           "<",
-          "0.7",
+          "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
@@ -332,7 +332,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.3",
-  "updatedAt": "2020-08-10T15:50:36.227Z",
+  "updatedAt": "2020-09-05T20:46:47.076Z",
   "devdoc": {
     "methods": {}
   },

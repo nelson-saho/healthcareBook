@@ -10,7 +10,8 @@
     "bootstrap": "^4.5.2",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "web3": "^1.2.11"
   },
   "devDependencies": {},
   "scripts": {

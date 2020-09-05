@@ -1,0 +1,367 @@
+/**/_xdc_._smc8b9 && _xdc_._smc8b9( {
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJVy09TbLIBZER3UwxWUDyxnY",
+         "types" : [ "route" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJD5Jxn2TIBZERXHT3hypgHt8",
+         "types" : [ "route" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : -12.0425314,
+               "lng" : -77.022707
+            },
+            "southwest" : {
+               "lat" : -12.0914741,
+               "lng" : -77.03643460000001
+            }
+         },
+         "copyrights" : "Données cartographiques ©2017 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "7,5 km",
+                  "value" : 7501
+               },
+               "duration" : {
+                  "text" : "17 minutes",
+                  "value" : 1016
+               },
+               "end_address" : "Av. Javier Prado Este, San Isidro 15036, Pérou",
+               "end_location" : {
+                  "lat" : -12.0908419,
+                  "lng" : -77.022707
+               },
+               "start_address" : "Av. Abancay, Distrito de Lima, Pérou",
+               "start_location" : {
+                  "lat" : -12.0440236,
+                  "lng" : -77.0246849
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "0,2 km",
+                        "value" : 179
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 38
+                     },
+                     "end_location" : {
+                        "lat" : -12.0426441,
+                        "lng" : -77.0238483
+                     },
+                     "html_instructions" : "Prendre la direction \u003cb\u003enord-est\u003c/b\u003e sur \u003cb\u003eAv. Abancay\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "bjohAf{buMWKw@]IEECo@YKEECQIOKYSk@]IE"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0440236,
+                        "lng" : -77.0246849
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,1 km",
+                        "value" : 138
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 37
+                     },
+                     "end_location" : {
+                        "lat" : -12.0434324,
+                        "lng" : -77.0244598
+                     },
+                     "html_instructions" : "Tourner complètement à \u003cb\u003egauche\u003c/b\u003e vers \u003cb\u003ePte. Ricardo Palma\u003c/b\u003e",
+                     "maneuver" : "turn-sharp-left",
+                     "polyline" : {
+                        "points" : "naohA`vbuMEAGAG?@HBDBDFJDDHFJFj@X~@^XJ"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0426441,
+                        "lng" : -77.0238483
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,2 km",
+                        "value" : 208
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 30
+                     },
+                     "end_location" : {
+                        "lat" : -12.0450766,
+                        "lng" : -77.0253716
+                     },
+                     "html_instructions" : "Continuer sur \u003cb\u003ePte. Ricardo Palma\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "lfohAzybuMRHNH`Ab@h@Rh@TdA`@RJ\\TVN"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0434324,
+                        "lng" : -77.0244598
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1,2 km",
+                        "value" : 1241
+                     },
+                     "duration" : {
+                        "text" : "4 minutes",
+                        "value" : 221
+                     },
+                     "end_location" : {
+                        "lat" : -12.0550384,
+                        "lng" : -77.03044919999999
+                     },
+                     "html_instructions" : "Continuer sur \u003cb\u003eAv. Abancay\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "vpohAp_cuMpHzCvEjBzEpB~DbBjExB~D`BvElBzCnAhD~APHd@Lj@HRA"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0450766,
+                        "lng" : -77.0253716
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,1 km",
+                        "value" : 119
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 25
+                     },
+                     "end_location" : {
+                        "lat" : -12.054502,
+                        "lng" : -77.0313518
+                     },
+                     "html_instructions" : "Tourner à \u003cb\u003edroite\u003c/b\u003e vers \u003cb\u003eJirón Cotabambas\u003c/b\u003e",
+                     "maneuver" : "turn-right",
+                     "polyline" : {
+                        "points" : "~nqhAh_duMBB@@?FEHa@r@iAfB"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0550384,
+                        "lng" : -77.03044919999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,1 km",
+                        "value" : 109
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 17
+                     },
+                     "end_location" : {
+                        "lat" : -12.0553268,
+                        "lng" : -77.0318989
+                     },
+                     "html_instructions" : "Continuer sur \u003cb\u003eJirón Cotabambas\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "rkqhA|dduMdDlB"
+                     },
+                     "start_location" : {
+                        "lat" : -12.054502,
+                        "lng" : -77.0313518
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,5 km",
+                        "value" : 484
+                     },
+                     "duration" : {
+                        "text" : "2 minutes",
+                        "value" : 114
+                     },
+                     "end_location" : {
+                        "lat" : -12.0558187,
+                        "lng" : -77.0363072
+                     },
+                     "html_instructions" : "\u003cb\u003eJirón Cotabambas\u003c/b\u003e tourne à \u003cb\u003edroite\u003c/b\u003e et devient \u003cb\u003eAv Franklin D. Roosevelt\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "xpqhAjhduMDfB^`GTfG@R@f@FzAF`ABHBHBHDF"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0553268,
+                        "lng" : -77.0318989
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,2 km",
+                        "value" : 178
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 31
+                     },
+                     "end_location" : {
+                        "lat" : -12.057386,
+                        "lng" : -77.03633669999999
+                     },
+                     "html_instructions" : "\u003cb\u003eAv Franklin D. Roosevelt\u003c/b\u003e tourne légèrement à \u003cb\u003egauche\u003c/b\u003e et devient \u003cb\u003eAv Paseo de la República\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "zsqhA|ceuMBDFBHBDBJBN@R?\\ApCK|@C"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0558187,
+                        "lng" : -77.0363072
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,4 km",
+                        "value" : 368
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 34
+                     },
+                     "end_location" : {
+                        "lat" : -12.0605979,
+                        "lng" : -77.03569019999999
+                     },
+                     "html_instructions" : "Prendre la bretelle à \u003cb\u003egauche\u003c/b\u003e vers \u003cb\u003eVía Expresa Paseo de la República\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "t}qhAbdeuMlAQJ?l@ClESh@CJAd@CDAh@Ej@GNE@?NGTIVMb@W"
+                     },
+                     "start_location" : {
+                        "lat" : -12.057386,
+                        "lng" : -77.03633669999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "2,8 km",
+                        "value" : 2803
+                     },
+                     "duration" : {
+                        "text" : "3 minutes",
+                        "value" : 182
+                     },
+                     "end_location" : {
+                        "lat" : -12.0839102,
+                        "lng" : -77.02609730000002
+                     },
+                     "html_instructions" : "Continuer sur \u003cb\u003eVía Expresa Paseo de la República\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "vqrhA``euMVS\\_@XY\\[XURQ^OTK\\Kj@QzCw@zCy@\\IRGr@QdD}@^KPG\\IfCs@fCq@vCw@jCq@hD_A~@UbBc@|@Uv@S~Aa@tEoAxE}A|@W|FeBB?JEDAPEdIiCv@W`@MNEDCt@YbA_@rCaAfBg@x@WtH{B|@UlBm@hCy@TGVIZI|FcB"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0605979,
+                        "lng" : -77.03569019999999
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "1,0 km",
+                        "value" : 1006
+                     },
+                     "duration" : {
+                        "text" : "2 minutes",
+                        "value" : 145
+                     },
+                     "end_location" : {
+                        "lat" : -12.0911101,
+                        "lng" : -77.025396
+                     },
+                     "html_instructions" : "Sortir à \u003cb\u003eAv. Paseo de la República\u003c/b\u003e",
+                     "maneuver" : "ramp-right",
+                     "polyline" : {
+                        "points" : "lcwhAbdcuMrAQrF{A`AMlA]RGhBm@lD{@rCy@dD_AhE_B\\ILAJ?LBDBDDLPF`AFv@?PF`@Ft@DXD\\Jh@"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0839102,
+                        "lng" : -77.02609730000002
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,2 km",
+                        "value" : 178
+                     },
+                     "duration" : {
+                        "text" : "1 minute",
+                        "value" : 43
+                     },
+                     "end_location" : {
+                        "lat" : -12.0913181,
+                        "lng" : -77.0270227
+                     },
+                     "html_instructions" : "Rejoindre \u003cb\u003eAv. Javier Prado Este\u003c/b\u003e",
+                     "maneuver" : "merge",
+                     "polyline" : {
+                        "points" : "lpxhAv_cuMH|A^dF"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0911101,
+                        "lng" : -77.025396
+                     },
+                     "travel_mode" : "DRIVING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,5 km",
+                        "value" : 490
+                     },
+                     "duration" : {
+                        "text" : "2 minutes",
+                        "value" : 99
+                     },
+                     "end_location" : {
+                        "lat" : -12.0908419,
+                        "lng" : -77.022707
+                     },
+                     "html_instructions" : "Tourner complètement à \u003cb\u003egauche\u003c/b\u003e pour rester sur \u003cb\u003eAv. Javier Prado Este\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eVotre destination se trouvera sur la gauche.\u003c/div\u003e",
+                     "maneuver" : "turn-sharp-left",
+                     "polyline" : {
+                        "points" : "vqxhAzicuM\\Ca@eFKiACYc@{Fa@iFASAK?AAG"
+                     },
+                     "start_location" : {
+                        "lat" : -12.0913181,
+                        "lng" : -77.0270227
+                     },
+                     "travel_mode" : "DRIVING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "bjohAf{buMsDaB_BcAMCG?@HFJLPTNj@X~@^l@TpAl@lDvAt@d@hOfGzKtEjExB~D`BrJ|DzDhBd@Lj@HV@@Hg@|@iAfBdDlBDfB^`GVzGHbCJjAFRHLPFPFb@@nDM|@ClAQx@CvFW`BMz@MPGTIz@e@lBiBl@g@t@[hA]vHqBjGaBvEqAnZ_ItHqBvGuBrGmBpLuDnCcAzFiBnJsCjIeCr@S|FcBrAQrF{A`AM`Be@hBm@lD{@xHyBhE_B\\IXARFRVVlDLnAPfAH|A^dF\\Ca@eFOcBeAeNCa@AG"
+         },
+         "summary" : "Vía Expresa Paseo de la República",
+         "warnings" : [],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
+ )

@@ -1,0 +1,284 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <title>HEALTHCARE BOOK BLOCKCHAIN</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+	<!-- page CSS -->
+	<link href="../plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="../plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" />
+	<link href="../plugins/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+	<link href="../plugins/bower_components/multiselect/css/multi-select.css"  rel="stylesheet" type="text/css" />
+    <!-- morris CSS -->
+    <link href="../plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/megna.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
+                <div class="top-left-part"><a class="logo" href="dashboard.html"><b><img src="../plugins/images/eliteadmin-logo.png" alt="home" /></b><span class="hidden-xs"><strong>elite</strong>hospital</span></a></div>
+                <ul class="nav navbar-top-links navbar-left hidden-xs">
+                    <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
+                    <li>
+                        <form role="search" class="app-search hidden-xs">
+                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img src="../plugins/images/users/d1.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Dr. Steave</b> </a>
+                        <ul class="dropdown-menu dropdown-user animated flipInY">
+                            <li><a href="javascript:void(0)"><i class="ti-user"></i>  My Profile</a></li>
+                            <li><a href="login.html"><i class="fa fa-power-off"></i>  Logout</a></li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- Left navbar-header -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+                <ul class="nav" id="side-menu">
+                    <li class="sidebar-search hidden-sm hidden-md hidden-lg">
+                        <!-- input-group -->
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+            <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
+            </span> </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li class="user-pro">
+                        <a href="#" class="waves-effect"><img src="../plugins/images/users/d1.jpg" alt="user-img" class="img-circle"> <span class="hide-menu">Dr. Steve Gection<span class="fa arrow"></span></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="javascript:void(0)"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a href="javascript:void(0)"><i class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="dashboard.html" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-user-md p-r-10"></i> <span class="hide-menu"> Doctors <span class="fa arrow"></span></span></a>
+                        <ul class="nav nav-second-level">
+                            <li> <a href="doctors.html">All doctors</a> </li>
+                            <li> <a href="add-doctor.html">Add doctor</a> </li>
+                            <li> <a href="edit-doctor.html">Edit doctor</a> </li>
+                        </ul>
+                    </li>
+                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="icon-people p-r-10"></i> <span class="hide-menu"> Patients <span class="fa arrow"></span></span></a>
+                        <ul class="nav nav-second-level">
+                            <li> <a href="patients.html">All patients</a> </li>
+                            <li> <a href="add-patient.html">Add patient</a> </li>
+                            <li class="active"> <a href="edit-patient.html">Edit patient</a> </li>
+                        </ul>
+                    </li>
+					<li> <a href="allergies.html" class="waves-effect"><i class="icon-shield p-r-10"></i> Allergies </a>
+                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="icon-magnifier p-r-10"></i> <span class="hide-menu"> Examination <span class="fa arrow"></span></span></a>
+                        <ul class="nav nav-second-level">
+                            <li> <a href="non-variable-biological-examination.html">Non variable biological examinations</a></li>
+							<li> <a href="ordered-examination.html">Ordered examinations</a></li>
+                            <li> <a href="examination-result.html">Examinations results</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="javascript:void(0);" class="waves-effect"><i class="icon-docs p-r-10"></i> <span class="hide-menu"> Prescribed medicines <span class="fa arrow"></span></span></a>
+                        <ul class="nav nav-second-level">
+                            <li> <a href="prescribed-medicines.html">All prescribed medicines</a></li>
+                            <li> <a href="add-prescribed-medicine.html">Add prescribed medicine</a></li>
+                            <li> <a href="edit-prescribed-medicine.html">Edit prescribed medicine</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Left navbar-header end -->
+  <!-- Page Content -->
+  <div id="page-wrapper">
+    <div class="container-fluid">
+	  <div class="row bg-title">
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			<h4 class="page-title">Edit patient</h4> </div>
+		<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			<ol class="breadcrumb">
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="#">Patients</a></li>
+				<li class="active">Edit patient</li>
+			</ol>
+		</div>
+		<!-- /.col-lg-12 -->
+	  </div>
+      <!-- .row -->
+      <div class="row">
+		 <div class="col-sm-4">
+          <div class="white-box">
+            <h3 class="box-title m-b-0">Deployer infos</h3>
+			<p class="text-muted m-b-30"> </p>
+            <form data-toggle="validator" class="form-horizontal">
+			<div class="form-group">
+                
+              </div>
+			  <div class="form-group">
+                
+              </div>
+              <div class="form-group">
+                <label for="inputFirstname" class="control-label col-sm-3">Firstname</label>
+				<div class="col-sm-9">
+                <input type="text" class="form-control" id="inputFirstname" placeholder="Firstname" readonly>
+				</div>
+              </div>
+              <div class="form-group">
+                <label for="inputLastname" class="control-label col-sm-3">Lastname</label>
+				<div class="col-sm-9">
+                <input type="text" class="form-control" id="inputLastname" placeholder="Lastname" readonly>
+				</div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress" class="control-label col-sm-3">Address</label>
+				<div class="col-sm-9">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Address" readonly>
+				</div>
+              </div>
+              <div class="form-group">
+                <label for="inputDate" class="control-label col-sm-3">Date</label>
+				<div class="col-sm-9">
+                <input type="date" class="form-control" id="inputDate" placeholder="Date" readonly>
+				</div>
+              </div>
+			   <div class="form-group">
+                
+              </div>
+			  <div class="form-group">
+                
+              </div>
+			  <div class="form-group">
+                
+              </div>
+            </form>
+          </div>
+        </div>
+	  
+        <div class="col-sm-8">
+          <div class="white-box">
+            <h3 class="box-title m-b-0">Edit patient</h3>
+            <p class="text-muted m-b-30"> Editing new patient</p>
+            <form data-toggle="validator">
+			<div class="row">
+				<div class="col-md-6">
+				  <div class="form-group">
+					<label for="inputPatientID" class="control-label">Patient ID</label>
+					<input type="text" class="form-control" readonly id="inputPatientID" placeholder="Patient ID" required>
+				  </div>
+			  </div>
+			  <div class="col-md-6">
+				  <div class="form-group">
+					<label for="inputFirstname1" class="control-label">Firstname</label>
+					<input type="text" class="form-control" id="inputFirstname1" placeholder="Firstname" required>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-6">
+			<div class="form-group">
+			<label for="gender" class="control-label">Gender</label>
+                <div class="radio">
+                  <input type="radio" name="gender" id="male" required>
+                  <label for="male"> Male </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="gender" id="female" required>
+                  <label for="female"> Female </label>
+                </div>
+              </div>
+		     </div>
+			<div class="col-md-6">
+			  <div class="form-group">
+                <label for="inputLastname1" class="control-label">Lastname</label>
+                <input type="text" class="form-control" id="inputLastname1" placeholder="Lastname" required>
+              </div>
+		    </div>
+		 </div>
+		 <div class="row">
+			<div class="col-md-6">
+              <div class="form-group">
+                <label for="address" class="control-label">Address</label>
+                <textarea id="address" class="form-control"  required></textarea>
+              </div>
+		     </div>
+			<div class="col-md-6">
+                <label for="allergies" class="control-label">Allergies</label>
+                <select id="allergies" class="selectpicker" multiple data-style="form-control">
+                  <option>Allergy 1</option>
+                  <option>Allergy 2</option>
+                  <option>Allergy 3</option>
+                </select>
+              </div>
+
+		 </div>
+		  <div class="form-group">
+			<button type="submit" class="btn btn-success">Edit</button>
+			<button type="reset" class="btn btn-danger">Cancel</button>
+		  </div>
+		  
+		</form>
+			
+          </div>
+        </div>
+       
+      </div>
+      <!-- /.row -->
+	 </div>
+    <!-- /.container-fluid -->
+    <footer class="footer text-center"> 2020 &copy; XXXXXXXXXXX </footer>
+  </div>
+  <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+<!-- jQuery -->
+<script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Menu Plugin JavaScript -->
+<script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+
+<!--slimscroll JavaScript -->
+<script src="js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="js/waves.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/custom.min.js"></script>
+<script src="js/validator.js"></script>
+
+<script src="../plugins/bower_components/custom-select/custom-select.min.js" type="text/javascript"></script>
+<script src="../plugins/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
+<!--Style Switcher -->
+<script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+</html>

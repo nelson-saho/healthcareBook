@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.7.0;
+pragma solidity >=0.5.0 <0.8.0;
 //pragma solidity ^0.5.16;
 pragma experimental ABIEncoderV2;
 
@@ -16,7 +16,7 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     using SafeMath32 for uint32;
     using SafeMath16 for uint16;
 
-    uint32 counterPatient = 0;
+    uint32 public counterPatient = 0;
 
     struct PatientInfo {
         uint32 patientId;
