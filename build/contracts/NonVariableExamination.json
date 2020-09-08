@@ -332,7 +332,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.3",
-  "updatedAt": "2020-09-05T20:46:47.087Z",
+  "updatedAt": "2020-09-06T09:05:21.686Z",
   "devdoc": {
     "details": "Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis",
     "methods": {},

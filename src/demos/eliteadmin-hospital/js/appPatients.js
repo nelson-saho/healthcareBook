@@ -32,25 +32,19 @@ App = {
   },
    
   render: function() {
-    var patientInstance2;
-    // Load account data
-    //web3.eth.getCoinbase(function(err, account) {
-      //if (err === null) {
-        //App.account = account;
-        //$("#accountAddress").html("Your Account: " + account);
-      //}
-    //});
-
+    //var patientInstance;
+    
     // Load contract data addThePatient
     App.contracts.Patient.deployed().then(function(instance) {
       patientInstance = instance;
-      return patientInstance.counterPatient(); 
+      return patientInstance.counterPatient();  
       
     }).then(function(counterPatient) {
       var patientsResults = $("#patientsResults");
       patientsResults.empty();
       
-      for (var i = 0; i <= counterPatient; i++) {
+      
+      for(var i = 0; i<= counterPatient; i++) {
         patientInstance.patients(i).then(function(aPatient) {
           var id = aPatient[0];
           var firstName = aPatient[1];
@@ -64,9 +58,8 @@ App = {
           var patientTemplate = "<tr><th>" + id + "</th><td>" + firstName + "</td><td>" + lastName + "</td><td>" + gender + "</td><td>" + adressOfPatient + "</td>" + action + "</tr>";
           patientsResults.append(patientTemplate);
         });
-        
-        
       }
+
     }).catch(function(error) {
       console.warn(error);
     });
@@ -76,10 +69,11 @@ App = {
     var firstNamePatient = $("#inputFirstname1").val();
     var lastNamePatient = $("#inputLastname1").val();
     var adressPatient = $("#address").val();
+    var genderPatient = document.querySelector('input[name="gender"]:checked').value;
     //var genderPatient = $("#inputDoctorAccount").val();
     //$("#test").html(firstNameDoctor + lastNameDoctor + hospitalAdressDoctor);
     App.contracts.Patient.deployed().then(function(instance) {
-      return instance.addPatient(firstNamePatient, lastNamePatient, "Male", adressPatient);
+      return instance.addPatient(firstNamePatient, lastNamePatient, genderPatient, adressPatient);
     }).then(function(result) {
       // Reset the form
       $("#formAddPatient").reset(); //document.getElementById("formAddPatient").reset();
