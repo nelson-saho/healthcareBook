@@ -98,7 +98,7 @@
                 <!--<li> <a href="edit-patient.html">Edit patient</a> </li>-->
               </ul>
             </li> 
-            <li> <a href="allergies.html" class="waves-effect active"><i class="icon-shield p-r-10"></i><span class="hide-menu"></span> Allergies <span class="fa arrow"></span></span></a>
+            <li> <a href="javascript:void(0);" class="waves-effect"><i class="icon-shield p-r-10"></i><span class="hide-menu"></span> Allergies <span class="fa arrow"></span></span></a>
               <ul class="nav nav-second-level">
                 <li> <a href="allergies.html">All allergies</a> </li>
                 <li> <a href="add-allergy.html">Add Allergy</a> </li>
@@ -138,7 +138,55 @@
           </div>
           <!-- .row -->
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-4">
+              <div class="white-box">
+                <h3 class="box-title m-b-0">Patient informations</h3>
+                <p class="text-muted m-b-30"> </p>
+                <form id="formPatient" data-toggle="validator" name="formPatient" class="form-horizontal" onSubmit="App.searchPatient(); return false;">
+                  <div class="form-group">
+                    <label for="inputPatientId" class="control-label col-sm-3">ID</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control" id="inputPatientId" placeholder="Patient ID" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputName" class="control-label col-sm-3">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" readonly>
+                    </div>
+                  </div>
+                  <!--<div class="form-group">
+                    <label for="inputLastname" class="control-label col-sm-3">Lastname</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputLastname" placeholder="Lastname" readonly>
+                    </div>
+                  </div>-->
+                  <div class="form-group">
+                    <label for="inputGender" class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputGender" placeholder="Gender" readonly>
+                    </div>
+                  </div>
+                  <!--<div class="form-group">
+                    <label for="inputAddress" class="control-label col-sm-3">Address</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Address" readonly>
+                    </div>
+                  </div>-->
+                  <div class="form-group">
+                    
+                  </div>
+                  <div class="form-group">
+                    <button id="submitButon" type="submit" class="btn btn-success">Search</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                  </div>
+                  
+
+                </form>
+              </div>
+            </div>
+            
+            <div class="col-sm-8">
               <div class="white-box">
                 <h3 class="box-title m-b-0">Allergies</h3>
                 <p class="text-muted m-b-30"> List of allergies</p>
@@ -155,10 +203,12 @@
 				            <div class="form-inline padding-bottom-15">
                       <div class="row">
                         <div class="col-sm-6">
-                          <div class="form-group">
-                            <button id="demo-btn-addrow" data-toggle="modal" data-target="#addAllergy" class="btn btn-outline btn-primary btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Add new allergy</button>
-                            <small>Adding a new allergy</small> 
-                          </div>
+                          <form class="form-horizontal form-material" id="loginform" action="add-allergy.html">
+                            <div class="form-group">
+                              <button id="demo-btn-addrow" class="btn btn-outline btn-primary btn-sm" type="submit"><i class="icon wb-plus" aria-hidden="true"></i>Add new allergy</button>
+                              <small>Adding a new allergy</small> 
+                            </div>
+                          </form>
                         </div>
                         <div class="col-sm-6 text-right m-b-20">
                           <div class="form-group">
@@ -167,116 +217,22 @@
                         </div>
                       </div>
                     </div>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Allergy 1</td>
-                        <td>XXXXXXXXXXXXXXXXXXXXX</td>
-                        <td class="text-nowrap"><a href="#" data-toggle="modal" data-target="#editAllergy" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a> <a href="#" data-toggle="modal" data-target="#deleteAllergy" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a> </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Allergy 2</td>
-                        <td>YYYYYYYYYYYYYYYYYYYYYYY</td>
-                        <td class="text-nowrap"><a href="#" data-toggle="modal" data-target="#editAllergy" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a> <a href="#" data-toggle="modal" data-target="#deleteAllergy" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a> </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Allergy 3</td>
-                        <td>ZZZZZZZZZZZZZZZZZZZZZZZZZ</td>
-                        <td class="text-nowrap"><a href="#" data-toggle="modal" data-target="#editAllergy" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a> <a href="#" data-toggle="modal" data-target="#deleteAllergy" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a> </td>
-                      </tr>
-                    </tbody>
+                    <tbody id="allergiesResult"> </tbody>
                   </table>
-			            <div class="modal fade" id="addAllergy" tabdashboard="-1" role="dialog" aria-labelledby="exampleModalLabel1">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title" id="exampleModalLabel1">Add allergy</h4>
-                        </div>
-                        <div class="modal-body">
-                          <form>
-                            <div class="form-group">
-                              <label for="inputAllergyID" class="control-label">Allergy ID</label>
-                              <input type="text" class="form-control" id="inputAllergyID" placeholder="Allergy ID" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputAllergyName" class="control-label">Allergy name</label>
-                              <input type="text" class="form-control" id="inputAllergyName" placeholder="Allergy name" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="message-text" class="control-label">Observations</label>
-                              <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="modal fade" id="editAllergy" tabdashboard="-1" role="dialog" aria-labelledby="exampleModalLabel2">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title" id="exampleModalLabel2">Edit allergy</h4>
-                        </div>
-                        <div class="modal-body">
-                          <form>
-                            <div class="form-group">
-                              <label for="inputAllergyID1" class="control-label">Allergy ID</label>
-                              <input type="text" class="form-control" readonly id="inputAllergyID1" placeholder="Allergy ID" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputAllergyName1" class="control-label">Allergy name</label>
-                              <input type="text" class="form-control" id="inputAllergyName1" placeholder="Allergy name" required>
-                            </div>
-                            <div class="form-group">
-                              <label for="message-text1" class="control-label">Observations</label>
-                              <textarea class="form-control" id="message-text1"></textarea>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-success">Edit</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-      
-                  <div class="modal fade" id="deleteAllergy" tabdashboard="-1" role="dialog" aria-labelledby="exampleModalLabel2">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title" id="exampleModalLabel2">Delete allergy</h4>
-                        </div>
-                        <div class="modal-body">
-                          <p>are you sure you want to delete this allergy ?</p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-                          <button type="button" class="btn btn-success">Yes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
-		          <!-- /.row -->
-            </div> 
-	          <!-- /.container-fluid -->
-	          <footer class="footer text-center"> 2020 &copy; XXXXXXXXXXX </footer>
+            </div>
+            
+          
           </div>
-          <!-- /#page-wrapper -->
-        </div>
-	      <!-- /#wrapper -->
+		          <!-- /.row -->
+        </div> 
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2020 &copy; XXXXXXXXXXX </footer>
+      </div>
+      <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
       </div>
     </div>
     <!-- jQuery -->
@@ -300,5 +256,11 @@
     <script src="../plugins/bower_components/sweetalert/jquery.sweet-alert.custom.js"></script>
     <!--Style Switcher -->
     <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/truffle-contract.js"></script>
+    <script language="javascript" type="text/javascript" src="js/appAllergy.js"></script>
+
   </body>
 </html>

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.8.0;
-//pragma solidity ^0.5.16;
+pragma solidity >=0.6.0 <0.8.0;
+//pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
 import "./SafeMath.sol";
@@ -17,6 +17,7 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     using SafeMath16 for uint16;
 
     uint32 public counterPatient = 0;
+    uint public counterAllergy = 0;
 
     struct PatientInfo {
         uint32 patientId;
@@ -59,10 +60,37 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
         emit NewPatient(counterPatient.sub(1), _firstName, _lastName);
     }
 
-    function getAllPatient() public view returns (PatientInfo[] memory) {
+    /*function getAllPatient() public view returns (PatientInfo[] memory) {
         return patients;
+    }*/
+    function isPatient(uint32 _patientId) public view returns (bool) {
+        bool find;
+        if (_patientId > counterPatient.sub(1)) {
+            find = false;
+        } else {
+            find = true;
+        }
+        return find;
     }
 
+    /*function getThePatient(uint32 _patientId) public view returns (PatientInfo memory) { 
+        PatientInfo memory patient = patients[_patientId];
+        return patient;
+    }*/
+    function getThePatient(uint32 _patientId) public view returns (string memory, string memory, string memory, string memory) { 
+        /*string memory _firstName = patients[_patientId].firstName;
+        string memory _lastName = patients[_patientId].lastName;
+        string memory _gender = patients[_patientId].gender;
+        string memory _addressOfPatient = patients[_patientId].addressOfPatient;
+        return (_firstName, _lastName, _gender, _addressOfPatient);*/
+        return (
+            patients[_patientId].firstName,
+            patients[_patientId].lastName,
+            patients[_patientId].gender,
+            patients[_patientId].addressOfPatient
+        );
+    }
+    
     /* Record the non-variable biological examinations of a patient i.e blood group, rhesus, electrophoresis
     It records these parameters once time */
     function setNonVariableExamination(string memory _bloodGroup,
@@ -78,12 +106,23 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     }
 
     // Recover the non-variable biological examinations of a patient i.e blood group, rhesus, electrophoresis
-    function getNonVariableExamination(uint _patientId) public view returns (NonVariableExaminationInfo memory){
+    /*function getNonVariableExamination(uint _patientId) public view returns (NonVariableExaminationInfo memory){
         return nonVariableExaminationOfPatient[_patientId];
+    }*/
+    function getNonVariableExamination(uint _patientId) public view returns (string memory, string memory, string memory){
+        /*string memory _bloodGroup = nonVariableExaminationOfPatient[_patientId].bloodGroup;
+        string memory _rhesus = nonVariableExaminationOfPatient[_patientId].rhesus;
+        string memory _electrophoresis = nonVariableExaminationOfPatient[_patientId].electrophoresis;
+        return (_bloodGroup, _rhesus, _electrophoresis);*/
+        return (
+            nonVariableExaminationOfPatient[_patientId].bloodGroup,
+            nonVariableExaminationOfPatient[_patientId].rhesus,
+            nonVariableExaminationOfPatient[_patientId].electrophoresis
+        );
     }
 
     // Add a speciality medicine prescribe by the doctor to any patient
-    function prescribeSpecialtyMedicine(uint _documentId,
+    function prescribeSpecialtyMedicine(string memory _documentCode,
         string memory _medicationCode,
         string memory _medicationName,
         string memory _normalStartDate,
@@ -93,7 +132,8 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
         string memory _prescriptionDate,
         string memory _observation,
         uint _patientId) public isDoctor(msg.sender) {
-        allSpecialtyMedicine.push(SpecialtyMedicineInfo(_documentId,
+        allSpecialtyMedicine.push(SpecialtyMedicineInfo(
+            _documentCode,
             _medicationCode,
             _medicationName,
             _normalStartDate,
@@ -102,19 +142,24 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
             _DosageQuantity,
             _prescriptionDate,
             _observation,
-            _patientId));
+            _patientId
+        ));
         specialtyMedicineToPatientCount[_patientId] = specialtyMedicineToPatientCount[_patientId].add(1);
+    }
+
+    function medicineCountOfPatient(uint _patientId) public view returns (uint) {
+        return specialtyMedicineToPatientCount[_patientId];
     }
 
     // During the use of the drug the patient noticed side effects. He reports them to the doctor who records them
     function setObservationAfterPrescription(uint _patientId,
-        uint _documentId,
+        string memory _documentCode,
         string memory _medicationCode,
         string memory _observation) public isDoctor(msg.sender) returns (bool) {
         uint i;
         for(i = 0; i < allSpecialtyMedicine.length; i++) {
             if (allSpecialtyMedicine[i].patientId == _patientId &&
-                allSpecialtyMedicine[i].documentId == _documentId &&
+                keccak256(abi.encodePacked(allSpecialtyMedicine[i].documentCode)) == keccak256(abi.encodePacked(_documentCode)) &&
                 keccak256(abi.encodePacked(allSpecialtyMedicine[i].medicationCode)) == keccak256(abi.encodePacked(_medicationCode))) {
                 allSpecialtyMedicine[i].observation = string(abi.encodePacked(allSpecialtyMedicine[i].observation, " ",_observation));
                 return true;
@@ -126,7 +171,7 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     }
 
     // Get all medecide took by one patient
-    function getAllPrescribeMedicine(uint _patientId) public view returns (SpecialtyMedicineInfo[] memory) {
+    /*function getAllPrescribeMedicine(uint _patientId) public view returns (SpecialtyMedicineInfo[] memory) {
         SpecialtyMedicineInfo[] memory allMedicine = new SpecialtyMedicineInfo[](specialtyMedicineToPatientCount[_patientId]);
         uint counter = 0;
         for(uint i = 0; i < allSpecialtyMedicine.length; i++) {
@@ -136,30 +181,102 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
             }
         }
         return allMedicine;
+    }*/
+    function getAllPrescribeMedicine(uint _patientId) public view returns (uint[] memory) {
+        uint[] memory allMedicine = new uint[](specialtyMedicineToPatientCount[_patientId]);
+        uint counter = 0;
+        for(uint i = 0; i < allSpecialtyMedicine.length; i++) {
+            if (allSpecialtyMedicine[i].patientId == _patientId) {
+                allMedicine[counter] = i;
+                counter = counter.add(1);
+            }
+        }
+        return allMedicine; 
     }
 
+    function getPrescribeMedicine1(uint _documentId) public view returns (string memory, string memory, string memory, string memory) {
+        /*string memory _medicationCode = allSpecialtyMedicine[_documentId].medicationCode;
+        string memory _medicationName = allSpecialtyMedicine[_documentId].medicationName;
+        string memory _normalStartDate = allSpecialtyMedicine[_documentId].normalStartDate;
+        string memory _normalEndDate = allSpecialtyMedicine[_documentId].normalEndDate;
+        string memory _DosageUnit = allSpecialtyMedicine[_documentId].DosageUnit;
+        uint _DosageQuantity = allSpecialtyMedicine[_documentId].DosageQuantity;
+        string memory _prescriptionDate = allSpecialtyMedicine[_documentId].prescriptionDate;
+        string memory _observation = allSpecialtyMedicine[_documentId].observation;
+        uint _patientId = allSpecialtyMedicine[_documentId].patientId;
+
+        return (_medicationCode, _medicationName, _normalStartDate, _normalEndDate, _DosageUnit, _DosageQuantity, _prescriptionDate, _observation, _patientId);*/
+        return (
+            allSpecialtyMedicine[_documentId].medicationCode,
+            allSpecialtyMedicine[_documentId].medicationName,
+            allSpecialtyMedicine[_documentId].normalStartDate,
+            allSpecialtyMedicine[_documentId].normalEndDate
+        );
+    }
+
+    function getPrescribeMedicine2(uint _documentId) public view returns (string memory, uint, string memory, string memory, uint){//, string memory, string memory, uint) {
+        /*string memory _medicationCode = allSpecialtyMedicine[_documentId].medicationCode;
+        string memory _medicationName = allSpecialtyMedicine[_documentId].medicationName;
+        string memory _normalStartDate = allSpecialtyMedicine[_documentId].normalStartDate;
+        string memory _normalEndDate = allSpecialtyMedicine[_documentId].normalEndDate;
+        string memory _DosageUnit = allSpecialtyMedicine[_documentId].DosageUnit;
+        uint _DosageQuantity = allSpecialtyMedicine[_documentId].DosageQuantity;
+        string memory _prescriptionDate = allSpecialtyMedicine[_documentId].prescriptionDate;
+        string memory _observation = allSpecialtyMedicine[_documentId].observation;
+        uint _patientId = allSpecialtyMedicine[_documentId].patientId;
+
+        return (_medicationCode, _medicationName, _normalStartDate, _normalEndDate, _DosageUnit, _DosageQuantity, _prescriptionDate, _observation, _patientId);*/
+        return (
+            allSpecialtyMedicine[_documentId].DosageUnit,
+            allSpecialtyMedicine[_documentId].DosageQuantity,
+            allSpecialtyMedicine[_documentId].prescriptionDate,
+            allSpecialtyMedicine[_documentId].observation,
+            allSpecialtyMedicine[_documentId].patientId
+        );
+    }
     // Add alergies record
     function addAllergy(uint _allergytId, string memory _allergyName, string memory _observation, uint _patientId) public isDoctor(msg.sender) {
-        allAllergies.push(AllergyInfo(_allergytId,
+        allAllergies.push(AllergyInfo(
+            _allergytId,
             _allergyName,
             _observation,
-            _patientId));
+            _patientId
+        ));
+        counterAllergy = counterAllergy.add(1);
         allergyPatientCount[_patientId] = allergyPatientCount[_patientId].add(1);
 
     }
 
+    function allergyCountOfPatient(uint _patientId) public view returns (uint) {
+        return allergyPatientCount[_patientId];
+    }
+
     // Get allergies of a patient through its Id
-    function getAllergies(uint _patientId) public view returns (AllergyInfo[] memory) {
-        AllergyInfo[] memory allAllergiesOfPatient = new AllergyInfo[](allergyPatientCount[_patientId]);
+    function getAllergies(uint _patientId) public view returns (uint[] memory) {
+        uint[] memory allAllergiesOfPatient = new uint[](allergyPatientCount[_patientId]);
         uint counter = 0;
         for(uint i = 0; i < allAllergies.length; i++) {
             if (allAllergies[i].patientId == _patientId) {
-                allAllergiesOfPatient[counter] = allAllergies[i];
+                allAllergiesOfPatient[counter] = allAllergies[i].allergyId;
                 counter = counter.add(1);
             }
         }
-        return allAllergiesOfPatient;
+        return (allAllergiesOfPatient);
     }
+
+    function getAllergy(uint _allergyId) public view returns (uint, string memory, string memory, uint) {
+        /*string memory _allergyname = allAllergies[_allergyId].allergyName;
+        string memory _observation = allAllergies[_allergyId].observation;
+        uint _patientId = allAllergies[_allergyId].patientId;
+        return (_allergyname, _observation, _patientId);*/
+        return (
+            _allergyId,
+            allAllergies[_allergyId].allergyName,
+            allAllergies[_allergyId].observation,
+            allAllergies[_allergyId].patientId
+        );
+    }
+
 
     //Records a medical examination prescription made by a doctor
     function orderAnExamination(uint _patientId,
@@ -176,7 +293,7 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     }
 
     //Returns all the different medical exams prescribed to a given patient
-    function allExaminationOrderToPatient(uint _patientId) public view returns (ExaminationInfo[] memory){
+    /*function allExaminationOrderToPatient(uint _patientId) public view returns (ExaminationInfo[] memory){
         ExaminationInfo[] memory myExaminations = new ExaminationInfo[](orderExaminationToPatientCount[_patientId]);
         uint counter = 0;
         for(uint i = 0; i < orderExamination.length; i++) {
@@ -186,6 +303,31 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
             }
         }
         return myExaminations;
+    }*/
+    function allExaminationOrderToPatient(uint _patientId) public view returns (uint[] memory){
+        uint[] memory myExaminations = new uint[](orderExaminationToPatientCount[_patientId]);
+        uint counter = 0;
+        for(uint i = 0; i < orderExamination.length; i++) {
+            if (orderExamination[i].patientId == _patientId) {
+                myExaminations[counter] = i;
+                counter = counter.add(1);
+            }
+        }
+        return myExaminations;
+    }
+
+    function getExaminationOrder(uint _docExaminationId) public view returns (string memory, string memory, string memory, uint) {
+        /*string memory _codeExaminationName = orderExamination[_docExaminationId].codeExaminationName;
+        string memory _examinationName = orderExamination[_docExaminationId].examinationName;
+        string memory _orderedDate = orderExamination[_docExaminationId].orderedDate;
+        uint _patientId = orderExamination[_docExaminationId].patientId;
+        return (_codeExaminationName, _examinationName, _orderedDate, _patientId);*/
+        return (
+            orderExamination[_docExaminationId].codeExaminationName,
+            orderExamination[_docExaminationId].examinationName,
+            orderExamination[_docExaminationId].orderedDate,
+            orderExamination[_docExaminationId].patientId
+        );
     }
 
     //Record the result of a prescribed medical examination
@@ -202,8 +344,19 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     }
 
     //Recover the result of an examination prescribed by a doctor
-    function getResultOfOrderExamination(uint _docExaminationId) public view returns (ResultExaminationInfo memory) {
-        return resultOfAnExamination[_docExaminationId];
+    function getResultOfOrderExamination(uint _docExaminationId) public view returns (uint, string memory, string memory, string memory) {
+        /*uint _docResultId = resultOfAnExamination[_docExaminationId].docResultId;
+        string memory _resultCode = resultOfAnExamination[_docExaminationId].resultCode;
+        string memory _codeResultName = resultOfAnExamination[_docExaminationId].codeResultName;
+        string memory _observationDate = resultOfAnExamination[_docExaminationId].observationDate;
+
+        return (_docResultId, _resultCode, _codeResultName, _observationDate);*/
+        return (
+            resultOfAnExamination[_docExaminationId].docResultId,
+            resultOfAnExamination[_docExaminationId].resultCode,
+            resultOfAnExamination[_docExaminationId].codeResultName,
+            resultOfAnExamination[_docExaminationId].observationDate
+        );
     }
 
     //Record the result detail of a prescribed medical examination
@@ -220,7 +373,18 @@ contract Patient is Doctor, NonVariableExamination, SpecialtyMedicine, Allergy, 
     }
 
     //Recover the result detail of an examination prescribed by a doctor
-    function getResultDetailExamination(uint _docResultId) public view returns (ResultExaminationDetailInfo memory) {
-        return detailOfResultExamination[_docResultId];
+    function getResultDetailExamination(uint _docResultId) public view returns (string memory, string memory, string memory, string memory) {
+        /*string memory _componentName = detailOfResultExamination[_docResultId].componentName;
+        string memory _labName = detailOfResultExamination[_docResultId].labName;
+        string memory _resultValue = detailOfResultExamination[_docResultId].resultValue;
+        string memory _resultObservation = detailOfResultExamination[_docResultId].resultObservation;
+
+        return (_componentName, _labName, _resultValue, _resultObservation);*/
+        return (
+            detailOfResultExamination[_docResultId].componentName,
+            detailOfResultExamination[_docResultId].labName,
+            detailOfResultExamination[_docResultId].resultValue,
+            detailOfResultExamination[_docResultId].resultObservation
+        );
     }
 }

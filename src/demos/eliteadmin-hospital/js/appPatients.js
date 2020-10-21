@@ -26,7 +26,6 @@ App = {
       App.contracts.Patient = TruffleContract(patient);
       // Connect provider to interact with contract
       App.contracts.Patient.setProvider(App.web3Provider);
-
       return App.render();
     });
   },
@@ -63,27 +62,7 @@ App = {
     }).catch(function(error) {
       console.warn(error);
     });
-  },
-
-  addThePatient: function() {
-    var firstNamePatient = $("#inputFirstname1").val();
-    var lastNamePatient = $("#inputLastname1").val();
-    var adressPatient = $("#address").val();
-    var genderPatient = document.querySelector('input[name="gender"]:checked').value;
-    //var genderPatient = $("#inputDoctorAccount").val();
-    //$("#test").html(firstNameDoctor + lastNameDoctor + hospitalAdressDoctor);
-    App.contracts.Patient.deployed().then(function(instance) {
-      return instance.addPatient(firstNamePatient, lastNamePatient, genderPatient, adressPatient);
-    }).then(function(result) {
-      // Reset the form
-      $("#formAddPatient").reset(); //document.getElementById("formAddPatient").reset();
-      
-
-    }).catch(function(err) {
-      console.error(err);
-    });
   }
-
 
 };
   

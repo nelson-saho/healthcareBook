@@ -98,7 +98,7 @@
                 <!--<li> <a href="edit-patient.html">Edit patient</a> </li>-->
               </ul>
             </li> 
-            <li> <a href="allergies.html" class="waves-effect active"><i class="icon-shield p-r-10"></i><span class="hide-menu"></span> Allergies <span class="fa arrow"></span></span></a>
+            <li> <a href="javascript:void(0);" class="waves-effect"><i class="icon-shield p-r-10"></i><span class="hide-menu"></span> Allergies <span class="fa arrow"></span></span></a>
               <ul class="nav nav-second-level">
                 <li> <a href="allergies.html">All allergies</a> </li>
                 <li> <a href="add-allergy.html">Add Allergy</a> </li>
@@ -127,13 +127,13 @@
         <div class="container-fluid">
           <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-              <h4 class="page-title">Edit doctor</h4> 
+              <h4 class="page-title">Add allergy</h4> 
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
               <ol class="breadcrumb">
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="#">Doctors</a></li>
-                <li class="active">Edit doctor</li>
+                <li><a href="allergies.html">Allergy</a></li>
+                <li class="active">Add Allergy</li>
               </ol>
             </div>
             <!-- /.col-lg-12 -->
@@ -142,75 +142,87 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="white-box">
-                <h3 class="box-title m-b-0">Deployer infos</h3>
+                <h3 class="box-title m-b-0">Patient informations</h3>
                 <p class="text-muted m-b-30"> </p>
-                <form data-toggle="validator" class="form-horizontal">
+                <form id="formPatient" data-toggle="validator" name="formPatient" class="form-horizontal" onSubmit="App.searchPatient(); return false;">
                   <div class="form-group">
-                    <label for="inputFirstname" class="control-label col-sm-3">Firstname</label>
+                    <label for="inputPatientId" class="control-label col-sm-3">ID</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputFirstname" placeholder="Firstname" readonly>
+                      <input type="text" class="form-control" id="inputPatientId" placeholder="Patient ID" required>
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputName" class="control-label col-sm-3">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" readonly>
+                    </div>
+                  </div>
+                  <!--<div class="form-group">
                     <label for="inputLastname" class="control-label col-sm-3">Lastname</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="inputLastname" placeholder="Lastname" readonly>
                     </div>
-                  </div>
+                  </div>-->
                   <div class="form-group">
+                    <label for="inputGender" class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputGender" placeholder="Gender" readonly>
+                    </div>
+                  </div>
+                  <!--<div class="form-group">
                     <label for="inputAddress" class="control-label col-sm-3">Address</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="inputAddress" placeholder="Address" readonly>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputDate" class="control-label col-sm-3">Date</label>
-                    <div class="col-sm-9">
-                      <input type="date" class="form-control" id="inputDate" placeholder="Date" readonly>
-                    </div>
-                  </div>
+                  </div>-->
                   <div class="form-group">
                     
                   </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-success">Search</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                  </div>
+                  
+
                 </form>
               </div>
             </div>
         
             <div class="col-sm-8">
               <div class="white-box">
-                <h3 class="box-title m-b-0">Edit doctor</h3>
-                <p class="text-muted m-b-30"> Editing a doctor</p>
-                <form data-toggle="validator">
+                <h3 class="box-title m-b-0">Add allergy</h3>
+                <p class="text-muted m-b-30"> Adding patient allergy</p>
+                <form id="formAllergy" data-toggle="validator" name="formAllergy" onSubmit="App.addTheAllergy(); return false;">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputDoctorID" class="control-label">Doctor ID</label>
-                        <input type="text" class="form-control" id="inputDoctorID" placeholder="Doctor ID" required readonly>
+                        <label for="inputAllergyID" class="control-label">Allergy ID</label>
+                        <input type="text" class="form-control" id="inputAllergyID" placeholder="Allergy ID" required readonly>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputFirstname1" class="control-label">Firstname</label>
-                        <input type="text" class="form-control" id="inputFirstname1" placeholder="Firstname" required>
+                        <label for="inputAllergyName" class="control-label">Allergy Name</label>
+                        <input type="text" class="form-control" id="inputAllergyName" placeholder="Allergy name" required>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputHospitalAddress" class="control-label">Hospital Address</label>
-                        <textarea id="inputHospitalAddress" class="form-control"  required></textarea>
+                        <label for="inputObservation" class="control-label">Observations</label>
+                        <textarea id="inputObservation" class="form-control"  required></textarea>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <!--<div class="col-md-6">
                       <div class="form-group">
                         <label for="inputLastname1" class="control-label">Lastname</label>
                         <input type="text" class="form-control" id="inputLastname1" placeholder="Lastname" required>
                       </div>
-                    </div>
+                    </div>-->
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-success">Edit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                     <button type="reset" class="btn btn-danger">Cancel</button>
                   </div>
                 </form>
@@ -242,5 +254,13 @@
     <script src="js/validator.js"></script>
     <!--Style Switcher -->
     <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/truffle-contract.js"></script>
+    <script language="javascript" type="text/javascript" src="js/appAllergyAdd.js"></script>
+
+    <!--script type="text/javascript" src="https://solc-bin.ethereum.org/bin/soljson-latest.js"></script-->
+
   </body>
 </html>

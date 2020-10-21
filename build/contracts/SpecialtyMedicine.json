@@ -1,29 +1,31 @@
 {
   "contractName": "SpecialtyMedicine",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":\"SpecialtyMedicine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":{\"keccak256\":\"0x247b1f3079822e9ee1d4027b6b6c537b68cb37b3fd8ea4cd0165e72a4901b9d2\",\"urls\":[\"bzz-raw://555814bb0a439b974303f5440dbc510078cc9b7f3c2a4fa2c72cfe60c6385f18\",\"dweb:/ipfs/QmbMpTDdJXyjcq3ZbHYHWMh5iQyYapH2eC8J8MgtQnktSk\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820721867cf00243555b698681b70b713910c5bff7edb6afc969e4c6a1b3e804e5564736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820721867cf00243555b698681b70b713910c5bff7edb6afc969e4c6a1b3e804e5564736f6c63430005100032",
-  "sourceMap": "68:374:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:374:10;;;;;;;",
-  "deployedSourceMap": "68:374:10:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.8.0;\r\n\r\ncontract SpecialtyMedicine {\r\n    struct SpecialtyMedicineInfo {\r\n        uint documentId;\r\n        string medicationCode;\r\n        string medicationName;\r\n        string normalStartDate;\r\n        string normalEndDate;\r\n        string DosageUnit;\r\n        uint DosageQuantity;\r\n        string prescriptionDate;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.1+commit.f4a555be\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":\"SpecialtyMedicine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol\":{\"keccak256\":\"0x63583df99fccc8540af4629eef7f9013fe92b93e424c65b0b2a27bc23977d6b1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8647ae2dba8d68ed8dadad99439971b949d7b219f7607d9f519043404b14da12\",\"dweb:/ipfs/QmYKVpdwfkqZvj71GCZa5unxffh4BeXmGkS9jP2y5kaQ3s\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122010334e9c072f79dafc3155777f0876f6d7a9a43f7f94904ae753fb0d5beb736564736f6c63430007010033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122010334e9c072f79dafc3155777f0876f6d7a9a43f7f94904ae753fb0d5beb736564736f6c63430007010033",
+  "immutableReferences": {},
+  "sourceMap": "68:378:10:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "68:378:10:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\ncontract SpecialtyMedicine {\r\n    struct SpecialtyMedicineInfo {\r\n        string documentCode;\r\n        string medicationCode;\r\n        string medicationName;\r\n        string normalStartDate;\r\n        string normalEndDate;\r\n        string DosageUnit;\r\n        uint DosageQuantity;\r\n        string prescriptionDate;\r\n        string observation;\r\n        uint patientId;\r\n    }\r\n}",
   "sourcePath": "C:\\Ethereum\\healthcareBook\\contracts\\SpecialtyMedicine.sol",
   "ast": {
     "absolutePath": "/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
     "exportedSymbols": {
       "SpecialtyMedicine": [
-        1688
+        2012
       ]
     },
-    "id": 1689,
+    "id": 2013,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1666,
+        "id": 1990,
         "literals": [
           "solidity",
           ">=",
-          "0.5",
+          "0.6",
           ".0",
           "<",
           "0.8",
@@ -33,55 +35,56 @@
         "src": "33:31:10"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 1688,
+        "id": 2012,
         "linearizedBaseContracts": [
-          1688
+          2012
         ],
         "name": "SpecialtyMedicine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "SpecialtyMedicine.SpecialtyMedicineInfo",
-            "id": 1687,
+            "id": 2011,
             "members": [
               {
                 "constant": false,
-                "id": 1668,
-                "name": "documentId",
+                "id": 1992,
+                "mutability": "mutable",
+                "name": "documentCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "142:15:10",
+                "scope": 2011,
+                "src": "142:19:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1667,
-                  "name": "uint",
+                  "id": 1991,
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "142:4:10",
+                  "src": "142:6:10",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1670,
+                "id": 1994,
+                "mutability": "mutable",
                 "name": "medicationCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "168:21:10",
+                "scope": 2011,
+                "src": "172:21:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -89,25 +92,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1669,
+                  "id": 1993,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "168:6:10",
+                  "src": "172:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1672,
+                "id": 1996,
+                "mutability": "mutable",
                 "name": "medicationName",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "200:21:10",
+                "scope": 2011,
+                "src": "204:21:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -115,25 +118,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1671,
+                  "id": 1995,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "200:6:10",
+                  "src": "204:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1674,
+                "id": 1998,
+                "mutability": "mutable",
                 "name": "normalStartDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "232:22:10",
+                "scope": 2011,
+                "src": "236:22:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -141,25 +144,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1673,
+                  "id": 1997,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "232:6:10",
+                  "src": "236:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1676,
+                "id": 2000,
+                "mutability": "mutable",
                 "name": "normalEndDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "265:20:10",
+                "scope": 2011,
+                "src": "269:20:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -167,25 +170,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1675,
+                  "id": 1999,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "265:6:10",
+                  "src": "269:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1678,
+                "id": 2002,
+                "mutability": "mutable",
                 "name": "DosageUnit",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "296:17:10",
+                "scope": 2011,
+                "src": "300:17:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -193,25 +196,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1677,
+                  "id": 2001,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "296:6:10",
+                  "src": "300:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1680,
+                "id": 2004,
+                "mutability": "mutable",
                 "name": "DosageQuantity",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "324:19:10",
+                "scope": 2011,
+                "src": "328:19:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -219,25 +222,25 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1679,
+                  "id": 2003,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "324:4:10",
+                  "src": "328:4:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1682,
+                "id": 2006,
+                "mutability": "mutable",
                 "name": "prescriptionDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "354:23:10",
+                "scope": 2011,
+                "src": "358:23:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -245,25 +248,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1681,
+                  "id": 2005,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "354:6:10",
+                  "src": "358:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1684,
+                "id": 2008,
+                "mutability": "mutable",
                 "name": "observation",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "388:18:10",
+                "scope": 2011,
+                "src": "392:18:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -271,25 +274,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1683,
+                  "id": 2007,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "388:6:10",
+                  "src": "392:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1686,
+                "id": 2010,
+                "mutability": "mutable",
                 "name": "patientId",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "417:14:10",
+                "scope": 2011,
+                "src": "421:14:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -297,48 +300,48 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1685,
+                  "id": 2009,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "417:4:10",
+                  "src": "421:4:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "SpecialtyMedicineInfo",
             "nodeType": "StructDefinition",
-            "scope": 1688,
-            "src": "102:337:10",
+            "scope": 2012,
+            "src": "102:341:10",
             "visibility": "public"
           }
         ],
-        "scope": 1689,
-        "src": "68:374:10"
+        "scope": 2013,
+        "src": "68:378:10"
       }
     ],
-    "src": "33:409:10"
+    "src": "33:413:10"
   },
   "legacyAST": {
     "absolutePath": "/C/Ethereum/healthcareBook/contracts/SpecialtyMedicine.sol",
     "exportedSymbols": {
       "SpecialtyMedicine": [
-        1688
+        2012
       ]
     },
-    "id": 1689,
+    "id": 2013,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1666,
+        "id": 1990,
         "literals": [
           "solidity",
           ">=",
-          "0.5",
+          "0.6",
           ".0",
           "<",
           "0.8",
@@ -348,55 +351,56 @@
         "src": "33:31:10"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 1688,
+        "id": 2012,
         "linearizedBaseContracts": [
-          1688
+          2012
         ],
         "name": "SpecialtyMedicine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "SpecialtyMedicine.SpecialtyMedicineInfo",
-            "id": 1687,
+            "id": 2011,
             "members": [
               {
                 "constant": false,
-                "id": 1668,
-                "name": "documentId",
+                "id": 1992,
+                "mutability": "mutable",
+                "name": "documentCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "142:15:10",
+                "scope": 2011,
+                "src": "142:19:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1667,
-                  "name": "uint",
+                  "id": 1991,
+                  "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "142:4:10",
+                  "src": "142:6:10",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1670,
+                "id": 1994,
+                "mutability": "mutable",
                 "name": "medicationCode",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "168:21:10",
+                "scope": 2011,
+                "src": "172:21:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -404,25 +408,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1669,
+                  "id": 1993,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "168:6:10",
+                  "src": "172:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1672,
+                "id": 1996,
+                "mutability": "mutable",
                 "name": "medicationName",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "200:21:10",
+                "scope": 2011,
+                "src": "204:21:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -430,25 +434,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1671,
+                  "id": 1995,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "200:6:10",
+                  "src": "204:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1674,
+                "id": 1998,
+                "mutability": "mutable",
                 "name": "normalStartDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "232:22:10",
+                "scope": 2011,
+                "src": "236:22:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -456,25 +460,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1673,
+                  "id": 1997,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "232:6:10",
+                  "src": "236:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1676,
+                "id": 2000,
+                "mutability": "mutable",
                 "name": "normalEndDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "265:20:10",
+                "scope": 2011,
+                "src": "269:20:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -482,25 +486,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1675,
+                  "id": 1999,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "265:6:10",
+                  "src": "269:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1678,
+                "id": 2002,
+                "mutability": "mutable",
                 "name": "DosageUnit",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "296:17:10",
+                "scope": 2011,
+                "src": "300:17:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -508,25 +512,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1677,
+                  "id": 2001,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "296:6:10",
+                  "src": "300:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1680,
+                "id": 2004,
+                "mutability": "mutable",
                 "name": "DosageQuantity",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "324:19:10",
+                "scope": 2011,
+                "src": "328:19:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -534,25 +538,25 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1679,
+                  "id": 2003,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "324:4:10",
+                  "src": "328:4:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1682,
+                "id": 2006,
+                "mutability": "mutable",
                 "name": "prescriptionDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "354:23:10",
+                "scope": 2011,
+                "src": "358:23:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -560,25 +564,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1681,
+                  "id": 2005,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "354:6:10",
+                  "src": "358:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1684,
+                "id": 2008,
+                "mutability": "mutable",
                 "name": "observation",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "388:18:10",
+                "scope": 2011,
+                "src": "392:18:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -586,25 +590,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1683,
+                  "id": 2007,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "388:6:10",
+                  "src": "392:6:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1686,
+                "id": 2010,
+                "mutability": "mutable",
                 "name": "patientId",
                 "nodeType": "VariableDeclaration",
-                "scope": 1687,
-                "src": "417:14:10",
+                "scope": 2011,
+                "src": "421:14:10",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -612,43 +616,53 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1685,
+                  "id": 2009,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "417:4:10",
+                  "src": "421:4:10",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "SpecialtyMedicineInfo",
             "nodeType": "StructDefinition",
-            "scope": 1688,
-            "src": "102:337:10",
+            "scope": 2012,
+            "src": "102:341:10",
             "visibility": "public"
           }
         ],
-        "scope": 1689,
-        "src": "68:374:10"
+        "scope": 2013,
+        "src": "68:378:10"
       }
     ],
-    "src": "33:409:10"
+    "src": "33:413:10"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.7.1+commit.f4a555be.Emscripten.clang"
   },
-  "networks": {},
-  "schemaVersion": "3.2.3",
-  "updatedAt": "2020-09-08T08:17:04.302Z",
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x3503643327abE7072a4C47daeaDf1CeCfDCa7eb4",
+      "transactionHash": "0x57802e9c5f772e328c7e0e417902e049c5a8a67f1f9e309c34b9eb6a34280d32"
+    }
+  },
+  "schemaVersion": "3.2.5",
+  "updatedAt": "2020-10-21T08:04:06.806Z",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }

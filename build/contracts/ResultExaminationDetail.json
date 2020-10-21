@@ -1,29 +1,31 @@
 {
   "contractName": "ResultExaminationDetail",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/ResultExaminationDetail.sol\":\"ResultExaminationDetail\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/ResultExaminationDetail.sol\":{\"keccak256\":\"0xd4d41457e31b0b048d2039eef5e7d7d9885a71feb4c1a9446738c0dd3d95b7d9\",\"urls\":[\"bzz-raw://2fa2d0c3f132513efff1de1d7ad401a4228b007611f2cf3bd95ab3f2fb321dc1\",\"dweb:/ipfs/QmdR72y9PknRYkw53ygpoC4Ng5whaZwV7SAKFijm1Vupdc\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820007fffded5d7f83a989af7815e5a50bace21ce2c6edc4d0fc4edacf5531343b264736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820007fffded5d7f83a989af7815e5a50bace21ce2c6edc4d0fc4edacf5531343b264736f6c63430005100032",
-  "sourceMap": "68:236:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:236:8;;;;;;;",
-  "deployedSourceMap": "68:236:8:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.8.0;\r\n\r\ncontract ResultExaminationDetail  {\r\n\r\n    struct ResultExaminationDetailInfo {\r\n        uint docResultId;\r\n        string componentName;\r\n        string labName;\r\n        string resultValue;\r\n        string resultObservation;\r\n    }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.1+commit.f4a555be\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/ResultExaminationDetail.sol\":\"ResultExaminationDetail\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/ResultExaminationDetail.sol\":{\"keccak256\":\"0x9bd0849d1f5c74297ab186facf7942b8fa364a74d34becc270168628fcbe4a86\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fd5f6a04121be9a41d34eec00bfd0e2804b27cde7a6301b160d9459469738409\",\"dweb:/ipfs/QmT9SpmfneNCbctF95jHRnX1LEEgoqHNrPzvBkHyyWV2Jf\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220007dc809d94873f63771a704ac8c3c87f3b3956778699396d69da1d68432991464736f6c63430007010033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220007dc809d94873f63771a704ac8c3c87f3b3956778699396d69da1d68432991464736f6c63430007010033",
+  "immutableReferences": {},
+  "sourceMap": "68:236:8:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "68:236:8:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\ncontract ResultExaminationDetail  {\r\n\r\n    struct ResultExaminationDetailInfo {\r\n        uint docResultId;\r\n        string componentName;\r\n        string labName;\r\n        string resultValue;\r\n        string resultObservation;\r\n    }\r\n}",
   "sourcePath": "C:\\Ethereum\\healthcareBook\\contracts\\ResultExaminationDetail.sol",
   "ast": {
     "absolutePath": "/C/Ethereum/healthcareBook/contracts/ResultExaminationDetail.sol",
     "exportedSymbols": {
       "ResultExaminationDetail": [
-        1107
+        1406
       ]
     },
-    "id": 1108,
+    "id": 1407,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1095,
+        "id": 1394,
         "literals": [
           "solidity",
           ">=",
-          "0.5",
+          "0.6",
           ".0",
           "<",
           "0.8",
@@ -33,28 +35,29 @@
         "src": "33:31:8"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 1107,
+        "id": 1406,
         "linearizedBaseContracts": [
-          1107
+          1406
         ],
         "name": "ResultExaminationDetail",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "ResultExaminationDetail.ResultExaminationDetailInfo",
-            "id": 1106,
+            "id": 1405,
             "members": [
               {
                 "constant": false,
-                "id": 1097,
+                "id": 1396,
+                "mutability": "mutable",
                 "name": "docResultId",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "157:16:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -63,7 +66,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1096,
+                  "id": 1395,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "157:4:8",
@@ -72,15 +75,15 @@
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1099,
+                "id": 1398,
+                "mutability": "mutable",
                 "name": "componentName",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "184:20:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -89,7 +92,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1098,
+                  "id": 1397,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "184:6:8",
@@ -98,15 +101,15 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1101,
+                "id": 1400,
+                "mutability": "mutable",
                 "name": "labName",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "215:14:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -115,7 +118,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1100,
+                  "id": 1399,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "215:6:8",
@@ -124,15 +127,15 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1103,
+                "id": 1402,
+                "mutability": "mutable",
                 "name": "resultValue",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "240:18:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -141,7 +144,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1102,
+                  "id": 1401,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "240:6:8",
@@ -150,15 +153,15 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1105,
+                "id": 1404,
+                "mutability": "mutable",
                 "name": "resultObservation",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "269:24:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -167,7 +170,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1104,
+                  "id": 1403,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "269:6:8",
@@ -176,18 +179,17 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "ResultExaminationDetailInfo",
             "nodeType": "StructDefinition",
-            "scope": 1107,
+            "scope": 1406,
             "src": "111:190:8",
             "visibility": "public"
           }
         ],
-        "scope": 1108,
+        "scope": 1407,
         "src": "68:236:8"
       }
     ],
@@ -197,18 +199,19 @@
     "absolutePath": "/C/Ethereum/healthcareBook/contracts/ResultExaminationDetail.sol",
     "exportedSymbols": {
       "ResultExaminationDetail": [
-        1107
+        1406
       ]
     },
-    "id": 1108,
+    "id": 1407,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1095,
+        "id": 1394,
         "literals": [
           "solidity",
           ">=",
-          "0.5",
+          "0.6",
           ".0",
           "<",
           "0.8",
@@ -218,28 +221,29 @@
         "src": "33:31:8"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 1107,
+        "id": 1406,
         "linearizedBaseContracts": [
-          1107
+          1406
         ],
         "name": "ResultExaminationDetail",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "ResultExaminationDetail.ResultExaminationDetailInfo",
-            "id": 1106,
+            "id": 1405,
             "members": [
               {
                 "constant": false,
-                "id": 1097,
+                "id": 1396,
+                "mutability": "mutable",
                 "name": "docResultId",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "157:16:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -248,7 +252,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1096,
+                  "id": 1395,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "157:4:8",
@@ -257,15 +261,15 @@
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1099,
+                "id": 1398,
+                "mutability": "mutable",
                 "name": "componentName",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "184:20:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -274,7 +278,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1098,
+                  "id": 1397,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "184:6:8",
@@ -283,15 +287,15 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1101,
+                "id": 1400,
+                "mutability": "mutable",
                 "name": "labName",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "215:14:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -300,7 +304,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1100,
+                  "id": 1399,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "215:6:8",
@@ -309,15 +313,15 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1103,
+                "id": 1402,
+                "mutability": "mutable",
                 "name": "resultValue",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "240:18:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -326,7 +330,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1102,
+                  "id": 1401,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "240:6:8",
@@ -335,15 +339,15 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 1105,
+                "id": 1404,
+                "mutability": "mutable",
                 "name": "resultObservation",
                 "nodeType": "VariableDeclaration",
-                "scope": 1106,
+                "scope": 1405,
                 "src": "269:24:8",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -352,7 +356,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1104,
+                  "id": 1403,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "269:6:8",
@@ -361,18 +365,17 @@
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "ResultExaminationDetailInfo",
             "nodeType": "StructDefinition",
-            "scope": 1107,
+            "scope": 1406,
             "src": "111:190:8",
             "visibility": "public"
           }
         ],
-        "scope": 1108,
+        "scope": 1407,
         "src": "68:236:8"
       }
     ],
@@ -380,15 +383,26 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.7.1+commit.f4a555be.Emscripten.clang"
   },
-  "networks": {},
-  "schemaVersion": "3.2.3",
-  "updatedAt": "2020-09-08T08:17:04.274Z",
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x1494AcC13b6CfdB9b5314c16e8dF620FF5D80B44",
+      "transactionHash": "0x33cd176da2c4d7811ed3b3c05317c69e9bd6b0d83ef38b2a4c4dd03915670c81"
+    }
+  },
+  "schemaVersion": "3.2.5",
+  "updatedAt": "2020-10-21T08:04:06.746Z",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }

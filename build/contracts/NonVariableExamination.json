@@ -1,61 +1,70 @@
 {
   "contractName": "NonVariableExamination",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis\",\"methods\":{},\"title\":\"NonVariableExamination\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/NonVariableExamination.sol\":\"NonVariableExamination\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/NonVariableExamination.sol\":{\"keccak256\":\"0x13f50c617a4f7cabb9801455a267c2347add89e3ea1bb410766a052445a9653c\",\"urls\":[\"bzz-raw://a06020f55e56746753be9bc021fe4db84d2a31642930c0a29ed5de39e2b5367e\",\"dweb:/ipfs/QmV17ezSpneUceZD7t8Nq8gV1SPayPYYA9jVAgxy458jvz\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158204ba41347ccf21563fbf8408f8231679a15749fb0b5b4fbdf323432d9598ccee264736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158204ba41347ccf21563fbf8408f8231679a15749fb0b5b4fbdf323432d9598ccee264736f6c63430005100032",
-  "sourceMap": "225:194:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;225:194:4;;;;;;;",
-  "deployedSourceMap": "225:194:4:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.21 <0.8.0;\r\n\r\n/**\r\n * @title NonVariableExamination\r\n * @dev Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis\r\n */\r\ncontract NonVariableExamination {\r\n    struct NonVariableExaminationInfo {\r\n        string bloodGroup;\r\n        string rhesus;\r\n        string electrophoresis;\r\n        uint patientId;\r\n    }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.1+commit.f4a555be\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis\",\"kind\":\"dev\",\"methods\":{},\"title\":\"NonVariableExamination\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Ethereum/healthcareBook/contracts/NonVariableExamination.sol\":\"NonVariableExamination\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Ethereum/healthcareBook/contracts/NonVariableExamination.sol\":{\"keccak256\":\"0x039d2d2bee5d6fe55c2a49e6252a44ac3d0c784f059dd1c4dc7b12c83035a7bd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f17c9a47ebf9bc40e34ad5e98994f45da8612fda5a832548d07ed5b2a43c2a65\",\"dweb:/ipfs/QmXHFy49YQAUhUtFJXvoFMeYXpkww2h5x3TkU26NAPdbM7\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220f96a34b7eefac3c2a4dd0f0763ecc964e7894201bf4ea662ee084662dc6d9bc964736f6c63430007010033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220f96a34b7eefac3c2a4dd0f0763ecc964e7894201bf4ea662ee084662dc6d9bc964736f6c63430007010033",
+  "immutableReferences": {},
+  "sourceMap": "224:194:4:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "224:194:4:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.6.0 <0.8.0;\r\n\r\n/**\r\n * @title NonVariableExamination\r\n * @dev Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis\r\n */\r\ncontract NonVariableExamination {\r\n    struct NonVariableExaminationInfo {\r\n        string bloodGroup;\r\n        string rhesus;\r\n        string electrophoresis;\r\n        uint patientId;\r\n    }\r\n}",
   "sourcePath": "C:\\Ethereum\\healthcareBook\\contracts\\NonVariableExamination.sol",
   "ast": {
     "absolutePath": "/C/Ethereum/healthcareBook/contracts/NonVariableExamination.sol",
     "exportedSymbols": {
       "NonVariableExamination": [
-        215
+        218
       ]
     },
-    "id": 216,
+    "id": 219,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 205,
+        "id": 207,
         "literals": [
           "solidity",
           ">=",
-          "0.4",
-          ".21",
+          "0.6",
+          ".0",
           "<",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:32:4"
+        "src": "33:31:4"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": "@title NonVariableExamination\n@dev Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis",
+        "documentation": {
+          "id": 208,
+          "nodeType": "StructuredDocumentation",
+          "src": "68:154:4",
+          "text": " @title NonVariableExamination\n @dev Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis"
+        },
         "fullyImplemented": true,
-        "id": 215,
+        "id": 218,
         "linearizedBaseContracts": [
-          215
+          218
         ],
         "name": "NonVariableExamination",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "NonVariableExamination.NonVariableExaminationInfo",
-            "id": 214,
+            "id": 217,
             "members": [
               {
                 "constant": false,
-                "id": 207,
+                "id": 210,
+                "mutability": "mutable",
                 "name": "bloodGroup",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "309:17:4",
+                "scope": 217,
+                "src": "308:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -63,25 +72,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 206,
+                  "id": 209,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "309:6:4",
+                  "src": "308:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 209,
+                "id": 212,
+                "mutability": "mutable",
                 "name": "rhesus",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "337:13:4",
+                "scope": 217,
+                "src": "336:13:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -89,25 +98,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 208,
+                  "id": 211,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "337:6:4",
+                  "src": "336:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 211,
+                "id": 214,
+                "mutability": "mutable",
                 "name": "electrophoresis",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "361:22:4",
+                "scope": 217,
+                "src": "360:22:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -115,25 +124,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 210,
+                  "id": 213,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "361:6:4",
+                  "src": "360:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 213,
+                "id": 216,
+                "mutability": "mutable",
                 "name": "patientId",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "394:14:4",
+                "scope": 217,
+                "src": "393:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -141,80 +150,87 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 212,
+                  "id": 215,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "394:4:4",
+                  "src": "393:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "NonVariableExaminationInfo",
             "nodeType": "StructDefinition",
-            "scope": 215,
-            "src": "264:152:4",
+            "scope": 218,
+            "src": "263:152:4",
             "visibility": "public"
           }
         ],
-        "scope": 216,
-        "src": "225:194:4"
+        "scope": 219,
+        "src": "224:194:4"
       }
     ],
-    "src": "33:386:4"
+    "src": "33:385:4"
   },
   "legacyAST": {
     "absolutePath": "/C/Ethereum/healthcareBook/contracts/NonVariableExamination.sol",
     "exportedSymbols": {
       "NonVariableExamination": [
-        215
+        218
       ]
     },
-    "id": 216,
+    "id": 219,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 205,
+        "id": 207,
         "literals": [
           "solidity",
           ">=",
-          "0.4",
-          ".21",
+          "0.6",
+          ".0",
           "<",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:32:4"
+        "src": "33:31:4"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": "@title NonVariableExamination\n@dev Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis",
+        "documentation": {
+          "id": 208,
+          "nodeType": "StructuredDocumentation",
+          "src": "68:154:4",
+          "text": " @title NonVariableExamination\n @dev Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis"
+        },
         "fullyImplemented": true,
-        "id": 215,
+        "id": 218,
         "linearizedBaseContracts": [
-          215
+          218
         ],
         "name": "NonVariableExamination",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "NonVariableExamination.NonVariableExaminationInfo",
-            "id": 214,
+            "id": 217,
             "members": [
               {
                 "constant": false,
-                "id": 207,
+                "id": 210,
+                "mutability": "mutable",
                 "name": "bloodGroup",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "309:17:4",
+                "scope": 217,
+                "src": "308:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -222,25 +238,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 206,
+                  "id": 209,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "309:6:4",
+                  "src": "308:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 209,
+                "id": 212,
+                "mutability": "mutable",
                 "name": "rhesus",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "337:13:4",
+                "scope": 217,
+                "src": "336:13:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -248,25 +264,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 208,
+                  "id": 211,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "337:6:4",
+                  "src": "336:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 211,
+                "id": 214,
+                "mutability": "mutable",
                 "name": "electrophoresis",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "361:22:4",
+                "scope": 217,
+                "src": "360:22:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -274,25 +290,25 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 210,
+                  "id": 213,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "361:6:4",
+                  "src": "360:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 213,
+                "id": 216,
+                "mutability": "mutable",
                 "name": "patientId",
                 "nodeType": "VariableDeclaration",
-                "scope": 214,
-                "src": "394:14:4",
+                "scope": 217,
+                "src": "393:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -300,45 +316,55 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 212,
+                  "id": 215,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "394:4:4",
+                  "src": "393:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "NonVariableExaminationInfo",
             "nodeType": "StructDefinition",
-            "scope": 215,
-            "src": "264:152:4",
+            "scope": 218,
+            "src": "263:152:4",
             "visibility": "public"
           }
         ],
-        "scope": 216,
-        "src": "225:194:4"
+        "scope": 219,
+        "src": "224:194:4"
       }
     ],
-    "src": "33:386:4"
+    "src": "33:385:4"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.7.1+commit.f4a555be.Emscripten.clang"
   },
-  "networks": {},
-  "schemaVersion": "3.2.3",
-  "updatedAt": "2020-09-08T08:17:04.270Z",
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x9CB40Cc1B3f81245FB5Bf31e4eF0BcA6c848278d",
+      "transactionHash": "0x0d0bcbd74c612d267501059c88b0e2dc3d7f148148f1f60cb0d6d11b70fdae10"
+    }
+  },
+  "schemaVersion": "3.2.5",
+  "updatedAt": "2020-10-21T08:04:06.737Z",
   "devdoc": {
     "details": "Implements non-variable biological examinations of a patient like blood group, rhesus, electrophoresis",
+    "kind": "dev",
     "methods": {},
-    "title": "NonVariableExamination"
+    "title": "NonVariableExamination",
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }

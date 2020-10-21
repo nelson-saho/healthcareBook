@@ -98,7 +98,7 @@
                 <!--<li> <a href="edit-patient.html">Edit patient</a> </li>-->
               </ul>
             </li> 
-            <li> <a href="allergies.html" class="waves-effect active"><i class="icon-shield p-r-10"></i><span class="hide-menu"></span> Allergies <span class="fa arrow"></span></span></a>
+            <li> <a href="javascript:void(0);" class="waves-effect"><i class="icon-shield p-r-10"></i><span class="hide-menu"></span> Allergies <span class="fa arrow"></span></span></a>
               <ul class="nav nav-second-level">
                 <li> <a href="allergies.html">All allergies</a> </li>
                 <li> <a href="add-allergy.html">Add Allergy</a> </li>
@@ -142,35 +142,45 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="white-box">
-                <h3 class="box-title m-b-0">Deployer infos</h3>
+                <h3 class="box-title m-b-0">Patient informations</h3>
                 <p class="text-muted m-b-30"> </p>
-                <form data-toggle="validator" class="form-horizontal">
+                <form id="formPatient" data-toggle="validator" name="formPatient" class="form-horizontal" onSubmit="App.searchPatient(); return false;">
                   <div class="form-group">
-                    <label for="inputFirstname" class="control-label col-sm-3">Firstname</label>
+                    <label for="inputPatientId" class="control-label col-sm-3">ID</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputFirstname" placeholder="Firstname" readonly>
+                      <input type="number" class="form-control" id="inputPatientId" placeholder="Patient ID" required>
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputName" class="control-label col-sm-3">Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" readonly>
+                    </div>
+                  </div>
+                  <!--<div class="form-group">
                     <label for="inputLastname" class="control-label col-sm-3">Lastname</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="inputLastname" placeholder="Lastname" readonly>
                     </div>
-                  </div>
+                  </div>-->
                   <div class="form-group">
+                    <label for="inputGender" class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputGender" placeholder="Gender" readonly>
+                    </div>
+                  </div>
+                  <!--<div class="form-group">
                     <label for="inputAddress" class="control-label col-sm-3">Address</label>
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="inputAddress" placeholder="Address" readonly>
                     </div>
+                  </div>-->
+                  <div class="form-group">
+                    
                   </div>
                   <div class="form-group">
-                    <label for="inputDate" class="control-label col-sm-3">Date</label>
-                    <div class="col-sm-9">
-                      <input type="date" class="form-control" id="inputDate" placeholder="Date" readonly>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                      
+                    <button type="submit" class="btn btn-success">Search</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
                   </div>
                 </form>
               </div>
@@ -178,34 +188,70 @@
           
             <div class="col-sm-8">
               <div class="white-box">
-                <h3 class="box-title m-b-0">Add doctor</h3>
-                <p class="text-muted m-b-30"> Adding a new doctor</p>
-                <form data-toggle="validator">
+                <h3 class="box-title m-b-0">Add specialty medicine</h3>
+                <p class="text-muted m-b-30"> Adding a new mdedicine</p>
+                <form id="formMedicine" data-toggle="validator" name="formMedicine" onSubmit="App.addMedicine(); return false;">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputDoctorID" class="control-label">Doctor ID</label>
-                        <input type="text" class="form-control" id="inputDoctorID" placeholder="Doctor ID" required>
+                        <label for="inputDocumentCode" class="control-label">Document Code</label>
+                        <input type="text" class="form-control" id="inputDocumentCode" placeholder="Document code" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputFirstname1" class="control-label">Firstname</label>
-                        <input type="text" class="form-control" id="inputFirstname1" placeholder="Firstname" required>
+                        <label for="inputMedicationCode" class="control-label">Medication code</label>
+                        <input type="text" class="form-control" id="inputMedicationCode" placeholder="Medication code" required>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputHospitalAddress" class="control-label">Hospital Address</label>
-                        <textarea id="inputHospitalAddress" class="form-control"  required></textarea>
+                        <label for="inputMedicationName" class="control-label">Medication name</label>
+                        <input type="text" class="form-control" id="inputMedicationName" placeholder="Medication name" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="inputLastname1" class="control-label">Lastname</label>
-                        <input type="text" class="form-control" id="inputLastname1" placeholder="Lastname" required>
+                        <label for="inputPrescriptionDate" class="control-label">Prescription date</label>
+                        <input type="date" class="form-control" id="inputPrescriptionDate" placeholder="Prescription date" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="inputStartDate" class="control-label">Normal start date</label>
+                        <input type="date" class="form-control" id="inputStartDate" placeholder="Normal start date" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="inputEndDate" class="control-label">Normal end date</label>
+                        <input type="date" class="form-control" id="inputEndDate" placeholder="Normal end date" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="inputDosageUnit" class="control-label">Dosage unit</label>
+                        <input type="text" class="form-control" id="inputDosageUnit" placeholder="Dosage unit" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="inputDosageQuantity" class="control-label">Dosage quantity</label>
+                        <input type="number" step="any" class="form-control" id="inputDosageQuantity" placeholder="Dosage quantity" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6"> <!-- style="padding-left: 15px;padding-right: 15px"-->
+                      <div class="form-group">
+                        <label for="inputObservations" class="control-label">Observations</label>
+                        <textarea id="inputObservations" class="form-control" ></textarea>
                       </div>
                     </div>
                   </div>
@@ -242,5 +288,11 @@
     <script src="js/validator.js"></script>
     <!--Style Switcher -->
     <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/truffle-contract.js"></script>
+    <script language="javascript" type="text/javascript" src="js/appMedicineAdd.js"></script>
+
   </body>
 </html>

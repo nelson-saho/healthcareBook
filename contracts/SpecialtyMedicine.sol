@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
 
 contract SpecialtyMedicine {
     struct SpecialtyMedicineInfo {
-        uint documentId;
+        string documentCode;
         string medicationCode;
         string medicationName;
         string normalStartDate;

@@ -66,24 +66,6 @@ App = {
       }).catch(function(error) {
         console.warn(error);
       });
-    },
-
-    addTheDoctor: function() {
-      var doctorAccount = $("#inputDoctorAccount").val();
-      var firstNameDoctor = $("#inputFirstname1").val();
-      var lastNameDoctor = $("#inputLastname1").val();
-      var hospitalAdressDoctor = $("#inputHospitalAddress").val();
-      //$("#test").html(firstNameDoctor + lastNameDoctor + hospitalAdressDoctor);
-      App.contracts.Patient.deployed().then(function(instance) {
-        return instance.addDoctor(firstNameDoctor, lastNameDoctor, hospitalAdressDoctor, doctorAccount);
-      }).then(function(result) {
-        // Reset the form
-        $("#formAddDoctor").reset(); //document.getElementById("formAddDoctor").reset();
-        
-
-      }).catch(function(err) {
-        console.error(err);
-      });
     }
 
   };

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.0 <0.8.0;
+pragma solidity >=0.6.0 <0.8.0;
 
 import "./SafeMath.sol";
 import "./Ownable.sol";
@@ -58,6 +58,8 @@ contract Doctor is Ownable {
         doctorCount[addressDoctor] = doctorCount[addressDoctor].add(1);
         emit NewDoctor(idDoctor, _firstName, _lastName);
     }
+
+    
 
     /* We can add other method as:
     - getAllDoctors
